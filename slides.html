@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/components/reveal.js/css/reveal.min.css">
-    <link rel="stylesheet" href="/components/reveal.js/css/theme/default.css" id="theme">
-    <link rel="stylesheet" href="/styles/slides.css">
-    <link rel="stylesheet" href="/components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="styles/slides.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
 
     <!--[if lt IE 9]>
-    <script src="/components/reveal.js/lib/js/html5shiv.js"></script>
+    <script src="components/reveal.js/lib/js/html5shiv.js"></script>
     <![endif]-->
 </head>
 
@@ -76,8 +76,8 @@ Use the <kbd class="dark">←</kbd> and <kbd class="dark">→</kbd> keys to navi
 
 </div>
 
-<script src="/components/reveal.js/lib/js/head.min.js"></script>
-<script src="/components/reveal.js/js/reveal.min.js"></script>
+<script src="components/reveal.js/lib/js/head.min.js"></script>
+<script src="components/reveal.js/js/reveal.min.js"></script>
 
 <script>
 
@@ -93,22 +93,22 @@ Use the <kbd class="dark">←</kbd> and <kbd class="dark">→</kbd> keys to navi
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-            { src: '/components/reveal.js/lib/js/classList.js', condition: function () {
+            { src: 'components/reveal.js/lib/js/classList.js', condition: function () {
                 return !document.body.classList;
             } },
-            { src: '/components/reveal.js/plugin/markdown/showdown.js', condition: function () {
+            { src: 'components/reveal.js/plugin/markdown/showdown.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: '/components/reveal.js/plugin/markdown/markdown.js', condition: function () {
+            { src: 'components/reveal.js/plugin/markdown/markdown.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: '/components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+            { src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
                 hljs.initHighlightingOnLoad();
             } },
-            { src: '/components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () {
+            { src: 'components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () {
                 return !!document.body.classList;
             } },
-            { src: '/components/reveal.js/plugin/notes/notes.js', async: true, condition: function () {
+            { src: 'components/reveal.js/plugin/notes/notes.js', async: true, condition: function () {
                 return !!document.body.classList;
             } }
         ]
