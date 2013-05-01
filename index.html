@@ -10,8 +10,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/0888d832.main.css">
-        <script src="scripts/vendor/0e15c528.modernizr.js"></script>
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
     </head>
     <body>
 
@@ -43,7 +45,7 @@
         <div class="presenter"></div>
         <div class="container has-start-animation" id="macbook">
             <div class="screen back"></div>
-            <img class="frame" src="images/df4a84b3.macbookpro.png">
+            <img class="frame" src="images/macbookpro.png">
             <iframe id="slides" src="slides.html" class="screen"></iframe>
         </div>
     </div>
@@ -69,6 +71,8 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <script data-main="scripts/215e4d7e.main" src="components/requirejs/require.js"></script>
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="components/requirejs/require.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
