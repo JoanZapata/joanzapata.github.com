@@ -1,0 +1,35 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  margin: 0px;
+  z-index: 1000;
+
+  &> .navbar-inner {
+    background: white;
+    height: $navbar-height;
+    line-height: $navbar-height - 7;
+    border: none;
+    border-bottom: 8px solid #EEE;
+    @include borderRadius(0px);
+
+    .brand {
+      font-size: 2em;
+      font-weight: 500;
+    }
+
+    &> .content > ul {
+      float: right;
+
+      &> li > a {
+        font-size: 1.1em;
+        height: $navbar-height !important;
+        line-height: $navbar-height;
+        background: none;
+      }
+
+      &> li.active > a {
+        @include boxShadow(none);
+      }
+    }
+  }
+}

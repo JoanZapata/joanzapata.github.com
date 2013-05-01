@@ -1,90 +1,78 @@
 <!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" width="100%" style="width: 100%"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-</head>
-<body ng-app="joanzapata.frApp">
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
-    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
-    experience this site.</p>
-<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
 
-<!--[if lt IE 9]>
-<script src="components/es5-shim/es5-shim.js"></script>
-<script src="components/json3/lib/json3.min.js"></script>
-<![endif]-->
+    <!-- Nav bar -->
+    <div class='navbar has-start-animation' id='navbar'>
+        <div class='navbar-inner'>
+            <div class="content">
 
-<!-- Nav bar -->
-<div class='navbar '>
-    <div class='navbar-inner'>
-        <div class="content">
+                <a class="brand" href="#">Joan Zapata</a>
 
-            <a class="brand" href="#">Joan Zapata</a>
-            <ul class='nav'>
-                <li class='active'>
-                    <a href='#'>Me</a>
-                </li>
-                <li>
-                    <a href='#/skills'>My skills</a>
-                </li>
-                <li>
-                    <a href='#/work'>My work</a>
-                </li>
-            </ul>
+                <ul class='nav'>
+                    <li>
+                        <a href="http://twitter.com/JoanZap"><i class="icon-twitter"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a href='http://github.com/joanzapata'><i class="icon-github-alt"></i> Github</a>
+                    </li>
+                    <li>
+                        <a href='http://www.linkedin.com/profile/view?id=66260725'><i class="icon-linkedin"></i> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Mac book -->
-<div class="background wood">
-    <div class="shadow"></div>
-    <div class="presenter"></div>
-    <div class="container macbookpro">
-        <div class="screen back"></div>
-        <img class="frame" src="images/macbookpro.png"/>
-
-        <div class="screen">
-            Content
+    <!-- Mac book -->
+    <div class="background macbook">
+        <div class="shadow"></div>
+        <div class="presenter"></div>
+        <div class="container has-start-animation" id="macbook">
+            <div class="screen back"></div>
+            <img class="frame" src="images/macbookpro.png"/>
+            <iframe id="slides" src="slides.html" class="screen"></iframe>
         </div>
     </div>
-</div>
 
-<script src="components/angular/angular.js"></script>
-<script src="components/angular-resource/angular-resource.js"></script>
-<script src="components/angular-sanitize/angular-sanitize.js"></script>
 
-<!-- build:js scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<!-- endbuild -->
+    <!-- Social -->
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    var _gaq = [
-        ['_setAccount', 'UA-XXXXX-X'],
-        ['_trackPageview']
-    ];
-    (function (d, t) {
-        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s)
-    }(document, 'script'));
-</script>
+    <h1 id="me"></h1>
+    <h1 id="skills"></h1>
+    <h1 id="work"></h1>
+
+
+
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="components/requirejs/require.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
