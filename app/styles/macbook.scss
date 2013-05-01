@@ -1,0 +1,24 @@
+
+
+.container {
+
+  &.macbookpro {
+    position: relative;
+    width: $macbook-width;
+    height: $macbook-height;
+
+    .screen {
+      position: absolute;
+      width: $macbook-screen-width;
+      height: $macbook-screen-height;
+      left: $macbook-screen-offset-x;
+      top: $macbook-screen-offset-y;
+
+      &.back {
+        background: url($macbook-background) center repeat-x;
+        @include desaturate;
+      }
+    }
+
+  }
+}

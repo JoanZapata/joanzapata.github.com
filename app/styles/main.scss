@@ -1,0 +1,112 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+@import "compass_twitter_bootstrap";
+@import "mixins";
+@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+// General
+$page-width: 1000px;
+
+// Navbar
+$navbar-height: 100px;
+
+// Macbook
+$macbook-base-height: 80px;
+$macbook-width: 863px;
+$macbook-height: 525px;
+$macbook-screen-width: 655px;
+$macbook-screen-height: 409px;
+$macbook-screen-offset-x: 104px;
+$macbook-screen-offset-y: 32px;
+$macbook-background: "../images/bg_stripes.jpg";
+$background-space: 50px;
+
+@import "macbook";
+
+.navbar {
+  margin: 0px;
+
+  &> .navbar-inner {
+    background: white;
+    height: $navbar-height;
+    line-height: $navbar-height - 14;
+    border: none;
+    border-bottom: 8px solid #EEE;
+    @include borderRadius(0px);
+
+    .brand {
+      color: #90887b;
+      font-family: 'Just Me Again Down Here', cursive;
+      font-size: 3em;
+    }
+
+    &> .content > ul {
+      float: right;
+
+      &> li > a {
+        font-size: 1.3em;
+        height: $navbar-height !important;
+        line-height: $navbar-height;
+        background: none;
+      }
+
+      &> li.active > a {
+        @include boxShadow(none);
+      }
+    }
+  }
+}
+
+.content {
+  width: $page-width;
+  margin: 0px auto;
+}
+
+.background {
+  padding-top: $background-space;
+  padding-bottom: $background-space / 3;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &.wood {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: url($macbook-background) center repeat-x;
+    }
+  }
+
+  .shadow {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    @include verticalBlackGradient;
+  }
+
+  .presenter {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: $macbook-base-height;
+    @include verticalWhiteGradient;
+  }
+}
