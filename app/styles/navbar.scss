@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 .navbar {
   position: absolute;
   width: 100%;
@@ -14,22 +17,25 @@
 
     .brand {
       font-size: 2em;
-      font-weight: 500;
+      font-weight: 400;
+      @include textShadow(1px 1px 0px #eee);
     }
 
     &> .content > ul {
       float: right;
 
       &> li > a {
+        @include animated(0.2s);
         font-size: 1.1em;
         height: $navbar-height !important;
         line-height: $navbar-height;
         background: none;
+
+        &:hover {
+          color: $color-blue;
+        }
       }
 
-      &> li.active > a {
-        @include boxShadow(none);
-      }
     }
   }
 }

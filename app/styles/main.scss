@@ -1,10 +1,6 @@
-$iconSpritePath: "../images/glyphicons-halflings.png";
-$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
-$fontAwesomePath: "../components/font-awesome/font";
-
+@import "variables";
 @import 'sass-bootstrap/lib/bootstrap';
 @import "font-awesome/sass/font-awesome";
-
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 @import "mixins";
 
@@ -13,31 +9,14 @@ html {
   height: 100%;
   overflow: hidden;
 }
+
 body {
-  //width: 100%;
   height: 100%;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1.1em;
   overflow: hidden;
 }
-
-// General
-$page-width: 1000px;
-
-// Navbar
-$navbar-height: 120px;
-
-// Macbook
-$macbook-base-height: 85px;
-$macbook-width: 863px;
-$macbook-height: 525px;
-$macbook-screen-width: 657px;
-$macbook-screen-height: 412px;
-$macbook-screen-offset-x: 103px;
-$macbook-screen-offset-y: 31px;
-$macbook-background: "../images/bg_stripes.jpg";
-$background-space: 50px;
 
 @import "macbook";
 @import "navbar";

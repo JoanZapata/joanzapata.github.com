@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 .background.macbook {
   padding-top: $background-space + $navbar-height;
 
@@ -50,6 +53,7 @@
 
       &.back {
         background: #f0f1eb;
+        @include roundGradient;
         @include alpha(0.9);
       }
     }
