@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+
+.background.libraries {
+  position: relative;
+  background: url(../images/bg.jpg) repeat;
+  text-align: center;
+  border-top: 8px solid #EEE;
+  border-bottom: 1px solid #efefef;
+
+  .shadow {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    @include verticalBlackGradientFromBottom;
+  }
+
+  .library {
+    display: inline-block;
+    width: 140px;
+    margin: 10px 0px;
+    margin-top: 30px;
+
+    img, i, .reveal {
+      color: #8c8c8c;
+      @include desaturate;
+      font-size: 80px;
+      margin-bottom: 20px;
+      line-height: 110px;
+    }
+
+    .reveal {
+      font-weight: 700;
+      line-height: 65px;
+    }
+
+    p {
+      font-family: 'Ubuntu Mono', sans-serif;
+      display: inline;
+      font-size: 1.7em;
+      text-transform: lowercase;
+      font-variant: small-caps;
+    }
+  }
+}

@@ -12,6 +12,7 @@
     height: $navbar-height;
     line-height: $navbar-height - 7;
     border: none;
+    padding: 0px;
     border-bottom: 8px solid #EEE;
     @include borderRadius(0px);
 

@@ -1,25 +1,35 @@
 @import "variables";
 @import 'sass-bootstrap/lib/bootstrap';
-@import "font-awesome/sass/font-awesome";
+@import 'font-awesome/sass/font-awesome.scss';
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 @import "mixins";
 
-html {
+html, body {
+  position: absolute;
+  min-width: $page-width;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 body {
-  height: 100%;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1.1em;
-  overflow: hidden;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 40px;
+  font-weight: 300;
+}
 @import "macbook";
 @import "navbar";
+@import "libraries";
+@import "footer";
+@import "skills";
 
 .content {
   width: $page-width;
