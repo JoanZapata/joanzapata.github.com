@@ -291,7 +291,8 @@ module.exports = function (grunt) {
                             'components/reveal.js/plugin/notes/notes.js',
                             'components/reveal.js/plugin/zoom-js/zoom.js',
                             'components/reveal.js/plugin/highlight/highlight.js',
-                            'components/reveal.js/lib/font/*.woff'
+                            'components/reveal.js/lib/font/*.woff',
+                            'CNAME'
                         ]
                     }
                 ]
