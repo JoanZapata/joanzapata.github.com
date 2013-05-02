@@ -25,6 +25,17 @@ h1 {
   margin: 20px 0px 40px;
   font-weight: 300;
 }
+
+a {
+  &:link, &:visited {
+    @include animated(0.2s);
+    color: $color-blue;
+    text-decoration: none;
+  }
+  &:hover {
+    color: lighten($color-blue, 10%);
+  }
+}
 @import "macbook";
 @import "navbar";
 @import "libraries";
