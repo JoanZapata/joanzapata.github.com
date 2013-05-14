@@ -23,13 +23,16 @@
     width: 140px;
     margin: 10px 0px;
     margin-top: 30px;
+    text-align: center;
 
-    img, i, .reveal {
+    img, .icon-flag, .reveal {
       color: #8c8c8c;
       @include desaturate;
       font-size: 80px;
       margin-bottom: 20px;
       line-height: 110px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     .reveal {
