@@ -20,6 +20,11 @@
       font-size: 2em;
       font-weight: 400;
       @include textShadow(1px 1px 0px #eee);
+
+      span {
+        color: #BBB;
+        font-weight: 300;
+      }
     }
 
     &> .content > ul {
