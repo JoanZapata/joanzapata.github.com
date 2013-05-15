@@ -18,6 +18,14 @@
     @include verticalBlackGradientFromBottom;
   }
 
+  a:link, a:visited {
+    color: #333;
+  }
+
+  a:hover {
+    color: $color-blue;
+  }
+
   .library {
     display: inline-block;
     width: 140px;
