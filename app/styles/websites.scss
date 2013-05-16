@@ -19,9 +19,8 @@
   }
 
   #carousel img {
-    display: hidden; /* hide images until carousel prepares them */
-    cursor: pointer; /* not needed if you wrap carousel items in links */
-    border: 1px solid #CCC;
+    display: hidden;
+    border: 1px solid #CCC !important;
 
     &.active {
       //width: 600px !important;
@@ -47,7 +46,7 @@
     margin-left: 810px;
     text-align: left;
     padding: 0px;
-    padding-top: 80px;
+    padding-top: 110px;
     @include alpha(0);
     @include animated;
     z-index: 1;

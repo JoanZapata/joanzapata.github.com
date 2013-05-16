@@ -65,9 +65,9 @@
 }
 
 @mixin boxShadow($val) {
-  -moz-box-shadow: $val;
-  -webkit-box-shadow: $val;
-  box-shadow: $val;
+  -moz-box-shadow: $val !important;
+  -webkit-box-shadow: $val !important;
+  box-shadow: $val !important;
 }
 
 @mixin textShadow($val) {

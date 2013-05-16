@@ -36,6 +36,7 @@ a {
     cursor: pointer;
   }
 }
+
 @import "macbook";
 @import "navbar";
 @import "libraries";
@@ -49,12 +50,16 @@ a {
 
 .background {
   padding-top: $background-space;
-  padding-bottom: $background-space;
+  padding-bottom: $background-space*2;
   position: relative;
   width: 100%;
 }
 
 .background.title {
   text-align: center;
-  padding-top: 100px;
+  padding-bottom: $background-space;
+  padding-top: $background-space*2;
+  h1 {
+    margin: 0px;
+  }
 }
