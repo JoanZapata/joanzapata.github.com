@@ -16,7 +16,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'bootstrap', 'carousel'], function (app, $) {
+require(['jquery', 'bootstrap', 'carousel'], function ($) {
     'use strict';
     $('#slides').focus();
 
@@ -31,6 +31,8 @@ require(['app', 'jquery', 'bootstrap', 'carousel'], function (app, $) {
     $('#macbook').delay(200).queue(show);
     $('#navbar').css('top', -200).delay(600).queue(show).queue(setCssTop);
 
+
+    var isClick = false;
     var movingTo = function(item) {
         var id = item.attr("jz-desc");
         console.log(id);
@@ -50,6 +52,7 @@ require(['app', 'jquery', 'bootstrap', 'carousel'], function (app, $) {
         forcedImageWidth: 640,
         forcedImageHeight: 440,
         movingToCenter: movingTo,
+        movedToCenter: movingTo,
         activeClassName: 'active',
         linkHandling: 2
     });
@@ -57,10 +60,12 @@ require(['app', 'jquery', 'bootstrap', 'carousel'], function (app, $) {
     movingTo($("#carousel img:nth-child(1)"));
 
     $("#chevron-left").click(function(){
+        isClick = true;
         carousel.prev();
     });
 
     $("#chevron-right").click(function(){
+        isClick = true;
         carousel.next();
     });
 });

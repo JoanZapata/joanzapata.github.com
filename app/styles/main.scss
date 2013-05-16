@@ -14,6 +14,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1.1em;
+  zoom: 0.9;
 }
 
 h1 {
@@ -39,7 +40,7 @@ a {
 @import "navbar";
 @import "libraries";
 @import "footer";
-@import "skills";
+@import "websites";
 
 .content {
   width: $page-width;
@@ -51,4 +52,9 @@ a {
   padding-bottom: $background-space;
   position: relative;
   width: 100%;
+}
+
+.background.title {
+  text-align: center;
+  padding-top: 100px;
 }

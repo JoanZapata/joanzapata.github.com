@@ -1,12 +1,7 @@
 @import "variables";
 @import "mixins";
 
-.background.skills {
-  text-align: center;
-}
-
-.background.experience {
-
+.background.websites {
   .container {
     position: relative;
     width: $page-width;
@@ -51,16 +46,19 @@
     position: absolute;
     margin-left: 810px;
     text-align: left;
-    //height: 220px;
+    padding: 0px;
     padding-top: 80px;
     @include alpha(0);
     @include animated;
     z-index: 1;
     top: -100px;
-    right: -20px;
+    color: #666;
+    line-height: 1.4;
+    font-size: 1.1em;
 
     h2 {
-      font-weight: 300;
+      width: 100%;
+      padding: 0px;
     }
     &.active {
       top: 0px;
@@ -73,7 +71,7 @@
   .buttons {
     position: absolute;
     width: 590px;
-    height: 150px;
+    height: 140px;
     text-align: center;
     right: 0px;
     bottom: 0px;
