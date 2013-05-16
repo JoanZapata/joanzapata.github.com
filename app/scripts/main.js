@@ -18,7 +18,6 @@ require.config({
 
 require(['jquery', 'bootstrap', 'carousel'], function ($) {
     'use strict';
-    $('#slides').focus();
 
     var show = function (next) {
         $(this).addClass('shown');
@@ -44,7 +43,8 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
     };
 
     var descs = $('.description');
-    var carousel = $('#carousel').waterwheelCarousel({
+    var carouselElem = $('#carousel');
+    var carousel = carouselElem.waterwheelCarousel({
         autoPlay: 10000,
         animationEasing: 'swing',
         speed: 600,
@@ -70,4 +70,18 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
     $('#chevron-right').click(function () {
         carousel.next();
     });
+
+    var focusLimit = 330;
+    var slides = $('#slides');
+    var adjustFocus = function(){
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        if (scrollTop > focusLimit){
+            window.frames[0].removeFocus();
+        } else {
+            console.log("Focus slides");
+            slides.focus();
+        }
+    };
+    $(window).scroll(adjustFocus);
+    adjustFocus();
 });

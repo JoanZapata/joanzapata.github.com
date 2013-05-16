@@ -63,3 +63,7 @@ a {
     margin: 0px;
   }
 }
+
+#dummy {
+  @include opacity(0);
+}
