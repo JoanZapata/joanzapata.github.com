@@ -4,3 +4,94 @@
 .background.skills {
   text-align: center;
 }
+
+.background.experience {
+
+  .container {
+    position: relative;
+    width: $page-width;
+  }
+
+  $margin: 50px;
+  #carousel {
+    width: 640px;
+    height: 440px;
+    overflow: visible;
+    display: relative;
+    div {
+      position: relative;
+    }
+  }
+
+  #carousel img {
+    display: hidden; /* hide images until carousel prepares them */
+    cursor: pointer; /* not needed if you wrap carousel items in links */
+    border: 1px solid #CCC;
+
+    &.active {
+      //width: 600px !important;
+      //height: 413px !important;
+    }
+    @include boxShadow(4px 9px 10px rgba(0, 0, 0, 0.1));
+    //@include borderRadius(4px);
+  }
+
+  .illustration {
+    position: relative;
+
+    &.pull-left {
+      margin-right: $margin;
+    }
+    &.pull-right {
+      margin-left: $margin;
+    }
+  }
+
+  .description {
+    position: absolute;
+    margin-left: 810px;
+    text-align: left;
+    //height: 220px;
+    padding-top: 80px;
+    @include alpha(0);
+    @include animated;
+    z-index: 1;
+    top: -100px;
+    right: -20px;
+
+    h2 {
+      font-weight: 300;
+    }
+    &.active {
+      top: 0px;
+      right: 0px;
+      @include alpha(1);
+      z-index: 2;
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    width: 590px;
+    height: 150px;
+    text-align: center;
+    right: 0px;
+    bottom: 0px;
+    letter-spacing: 15px;
+
+    .chevron {
+      @include animated(0.1s);
+      color: #DDD;
+    }
+
+    #chevron-left, #chevron-right {
+      display: inline-block;
+      &:hover {
+        cursor: pointer;
+        i {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+}

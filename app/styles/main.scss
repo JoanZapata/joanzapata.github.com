@@ -25,12 +25,14 @@ h1 {
 
 a {
   &:link, &:visited {
-    @include animated(0.2s);
+    @include animated(0.3s);
     color: $color-blue;
     text-decoration: none;
   }
   &:hover {
     color: lighten($color-blue, 10%);
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 @import "macbook";
