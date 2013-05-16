@@ -78,7 +78,6 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
         if (scrollTop > focusLimit){
             window.frames[0].removeFocus();
         } else {
-            console.log("Focus slides");
             slides.focus();
         }
     };
