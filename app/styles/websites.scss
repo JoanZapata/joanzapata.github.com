@@ -22,13 +22,7 @@
   #carousel img {
     display: hidden;
     border: 1px solid #CCC !important;
-
-    &.active {
-      //width: 600px !important;
-      //height: 413px !important;
-    }
     @include boxShadow(4px 9px 10px rgba(0, 0, 0, 0.1));
-    //@include borderRadius(4px);
   }
 
   .illustration {
@@ -51,7 +45,6 @@
     @include alpha(0);
     @include animated;
     z-index: 1;
-    top: -100px;
     color: #666;
     line-height: 1.4;
     font-size: 1.1em;

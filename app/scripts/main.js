@@ -31,7 +31,6 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
     $('#macbook').delay(200).queue(show);
     $('#navbar').css('top', -200).delay(600).queue(show).queue(setCssTop);
 
-    var isClick = false;
     var movingTo = function (item) {
         var id = item.attr('jz-desc');
         console.log(id);
@@ -52,8 +51,12 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
         keyboardNav: true,
         forcedImageWidth: 640,
         forcedImageHeight: 440,
-        movingToCenter: movingTo,
         movedToCenter: movingTo,
+        movingFromCenter: function () {
+            descs.each(function () {
+                $(this).removeClass('active');
+            });
+        },
         activeClassName: 'active',
         linkHandling: 2
     });
@@ -61,12 +64,10 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
     movingTo($('#carousel img:nth-child(1)'));
 
     $('#chevron-left').click(function () {
-        isClick = true;
         carousel.prev();
     });
 
     $('#chevron-right').click(function () {
-        isClick = true;
         carousel.next();
     });
 });
