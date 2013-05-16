@@ -31,20 +31,21 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
     $('#macbook').delay(200).queue(show);
     $('#navbar').css('top', -200).delay(600).queue(show).queue(setCssTop);
 
-
     var isClick = false;
-    var movingTo = function(item) {
-        var id = item.attr("jz-desc");
+    var movingTo = function (item) {
+        var id = item.attr('jz-desc');
         console.log(id);
-        descs.each(function (elem) {
-            if ($(this).attr('id') == id)
-                $(this).addClass("active");
-            else  $(this).removeClass("active");
+        descs.each(function () {
+            if ($(this).attr('id') === id) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
         });
-    }
+    };
 
-    var descs = $(".description");
-    var carousel = $("#carousel").waterwheelCarousel({
+    var descs = $('.description');
+    var carousel = $('#carousel').waterwheelCarousel({
         autoPlay: 10000,
         animationEasing: 'swing',
         speed: 600,
@@ -57,14 +58,14 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
         linkHandling: 2
     });
 
-    movingTo($("#carousel img:nth-child(1)"));
+    movingTo($('#carousel img:nth-child(1)'));
 
-    $("#chevron-left").click(function(){
+    $('#chevron-left').click(function () {
         isClick = true;
         carousel.prev();
     });
 
-    $("#chevron-right").click(function(){
+    $('#chevron-right').click(function () {
         isClick = true;
         carousel.next();
     });
