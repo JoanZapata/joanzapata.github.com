@@ -38,7 +38,6 @@
         background: none;
 
         &> img {
-          @include animated(0.2s);
           @include desaturate;
           margin-top: -8px;
         }
