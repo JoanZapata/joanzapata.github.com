@@ -37,11 +37,19 @@
         line-height: $navbar-height;
         background: none;
 
+        &> img {
+          @include animated(0.2s);
+          @include desaturate;
+          margin-top: -8px;
+        }
+
         &:hover {
           color: $color-blue;
+          &> img {
+            @include cancelFilters;
+          }
         }
       }
-
     }
   }
 }

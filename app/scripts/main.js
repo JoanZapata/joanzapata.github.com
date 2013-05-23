@@ -73,9 +73,9 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
 
     var focusLimit = 330;
     var slides = $('#slides');
-    var adjustFocus = function(){
+    var adjustFocus = function () {
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-        if (scrollTop > focusLimit){
+        if (scrollTop > focusLimit) {
             window.frames[0].removeFocus();
         } else {
             slides.focus();
@@ -83,4 +83,5 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
     };
     $(window).scroll(adjustFocus);
     adjustFocus();
+
 });
