@@ -55,6 +55,19 @@
     h2 {
       width: 100%;
       padding: 0px;
+
+      a:link, a:visited {
+        font-weight: 300;
+        color: #999;
+
+        i {
+          color: #BBB;
+        }
+      }
+
+      a:hover {
+        color: $color-blue;
+      }
     }
     &.active {
       top: 0px;

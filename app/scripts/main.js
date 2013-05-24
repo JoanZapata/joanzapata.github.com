@@ -72,7 +72,7 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
         carousel.next();
     });
 
-    var focusLimit = 330;
+    var focusLimit = 300;
     var slides = $('#slides');
     var adjustFocus = function () {
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
