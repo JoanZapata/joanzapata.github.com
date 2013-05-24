@@ -21,8 +21,11 @@
 
   #carousel img {
     display: hidden;
-    border: 1px solid #CCC !important;
-    @include boxShadow(4px 9px 10px rgba(0, 0, 0, 0.1));
+
+    &.withBorders {
+      border: 1px solid #CCC !important;
+      @include boxShadow(4px 9px 10px rgba(0, 0, 0, 0.1));
+    }
   }
 
   .illustration {
