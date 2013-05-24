@@ -51,6 +51,7 @@ require(['jquery', 'bootstrap', 'carousel'], function ($) {
         keyboardNav: true,
         forcedImageWidth: 640,
         forcedImageHeight: 440,
+        opacityMultiplier: 0.15,
         movedToCenter: movingTo,
         movingFromCenter: function () {
             descs.each(function () {
