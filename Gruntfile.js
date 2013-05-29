@@ -287,7 +287,7 @@ module.exports = function (grunt) {
                             'components/reveal.js/css/theme/*',
                             'components/**/*.min.{js,css}',
                             'components/modernizr/modernizr.js',
-                            'components/font-awesome/font/*.{woff,ttf}',
+                            'components/font-awesome-more/font/*.{woff,ttf}',
                             'components/reveal.js/plugin/notes/notes.js',
                             'components/reveal.js/plugin/zoom-js/zoom.js',
                             'components/reveal.js/plugin/highlight/highlight.js',
