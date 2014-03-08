@@ -1,1 +1,3 @@
-console.log('\'Allo \'Allo!');
+$(function() {
+    console.log("On page ready");
+});
