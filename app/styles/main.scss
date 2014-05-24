@@ -1,9 +1,207 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
 
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue";
+    line-height: 1.5;
+    font-size: 18px;
+    color: $text-base;
+}
+
+.faded {
+    @include opacity(0.4);
+}
+
+%title {
+    font-family: Lanenar;
+    font-size: 3em;
+    line-height: 1.4;
+}
+
+%chapter-large {
+    background: $color-light-gray;
+    padding-top: $space-xxlg;
+    padding-bottom: $space-xxlg;
+}
+
+.chapter-intro {
+    @extend %chapter-large;
+    text-align: center;
+
+    .container {
+        img {
+            @include opacity(0.8);
+            margin-bottom: $space-md;
+        }
+        .title {
+            @extend %title;
+        }
+        .subtitle {
+            @extend %title;
+            color: $text-base-even-lighter;
+
+            @media (max-width: $screen-xs) {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+.chapter-title {
+    position: relative;
+    text-align: center;
+    height: 0px;
+
+    .text {
+        top: -13px;
+        width: 100%;
+        position: absolute;
+        line-height: 1.2;
+        color: $text-base-even-even-lighter;
+        @include white-shadow();
+    }
+}
+
+.chapter-mobile {
+    padding-top: $space-xxlg;
+    padding-bottom: $space-xxlg;
+    border-bottom: 1px solid $color-white-darker;
+
+    .container {
+        .row {
+            .images {
+                @include make-sm-column(5);
+                text-align: right;
+                padding-left: $space-xlg;
+                padding-right: $space-xlg;
+                margin-top: $space-sm;
+            }
+
+            .texts {
+                margin-top: $space-md;
+                margin-bottom: $space-md;
+                @include make-sm-column(7);
+                text-align: left;
+
+                .texts-wrapper {
+                    max-width: 450px;
+                    text-align: center;
+                    display: inline-block;
+                }
+
+                .title {
+                    @extend %title;
+                }
+
+                .info {
+                    color: $text-base-even-even-lighter;
+                    margin-top: $space-xsm;
+                    text-transform: uppercase;
+                }
+
+                .description {
+                    display: inline;
+                    color: $text-base-lighter;
+                    line-height: 1.6;
+                }
+
+                .link {
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+
+    // Alternate left/right
+    &:nth-child(odd) {
+        .container .row {
+            .images {
+                @include make-sm-column-push(7);
+                text-align: left;
+            }
+            .texts {
+                @include make-sm-column-pull(5);
+                text-align: right;
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        &:nth-child(n) .container .row {
+            .images {
+                text-align: center;
+            }
+            .texts {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.chapter-mobile-gray {
+    @extend .chapter-mobile;
+    background: $color-light-gray;
+    border-bottom: 1px solid $color-light-gray-darker;
+}
+
+.chapter-oss {
+    @extend .chapter-mobile;
+
+    .vignette {
+        @include make-sm-column(4);
+        text-align: center;
+
+        .image {
+            margin-bottom: $space-sm;
+        }
+
+        .title {
+            @extend %title;
+        }
+
+        .description {
+            color: $text-base-lighter;
+            max-width: 450px;
+            margin: 0px auto;
+        }
+
+        @media (max-width: $screen-sm) {
+            margin-top: $space-xxlg;
+            margin-bottom: $space-xxlg;
+        }
+    }
+}
+
+.chapter-footer {
+    @extend %chapter-large;
+
+    .container .row {
+        margin-bottom: $space-xlg;
+    }
+    .title {
+        text-transform: uppercase;
+        color: $text-base-even-lighter;
+    }
+
+    i {
+        width: 20px;
+        margin-right: $space-xsm;
+        text-align: right;
+    }
+
+    .copyright {
+        text-align: center;
+        color: $text-base-even-even-lighter;
+    }
 }

@@ -1,0 +1,12 @@
+@mixin white-shadow {
+    $shadow: "";
+    @for $i from -2 to 3 {
+        @for $j from -2 to 3 {
+            $shadow: $shadow + $i + 'px ' + $j + 'px 0px #FFF';
+            @if $i != 2 or $j != 2 {
+                $shadow: $shadow + ", ";
+            }
+        }
+    }
+    text-shadow: unquote($shadow);
+}

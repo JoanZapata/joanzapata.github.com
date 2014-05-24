@@ -1,0 +1,16 @@
+$text-base: #333333;
+$text-base-lighter: lighten($text-base, 20%);
+$text-base-even-lighter: lighten($text-base-lighter, 20%);
+$text-base-even-even-lighter: lighten($text-base-even-lighter, 20%);
+
+$space-xsm: 5px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 32px;
+$space-xlg: 44px;
+$space-xxlg: 100px;
+
+$color-white: #FFF;
+$color-white-darker: darken($color-white, 4%);
+$color-light-gray: #f9f9f9;
+$color-light-gray-darker: darken($color-light-gray, 4%);
