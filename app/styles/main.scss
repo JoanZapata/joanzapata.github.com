@@ -20,6 +20,7 @@ body {
     line-height: 1.5;
     font-size: 18px;
     color: $text-base;
+    @media (max-width: $screen-xs) { font-size: 15px; }
 }
 
 .faded {
@@ -98,33 +99,58 @@ body {
                 text-align: left;
 
                 .texts-wrapper {
+                    cursor: pointer;
                     max-width: 450px;
                     text-align: center;
                     display: inline-block;
-                }
 
-                .title {
-                    @extend %title;
-                }
+                    .title {
+                        @extend %title;
+                    }
 
-                .info {
-                    color: $text-base-even-even-lighter;
-                    margin-top: $space-xsm;
-                    text-transform: uppercase;
-                }
+                    .info {
+                        font-family: "Source Sans Pro Light";
+                        color: $text-base-even-even-lighter;
+                        margin-top: $space-xsm;
+                        text-transform: uppercase;
+                    }
 
-                .description {
-                    display: inline;
-                    color: $text-base-lighter;
-                    line-height: 1.6;
-                }
+                    .description {
+                        display: inline;
+                        color: $text-base-lighter;
+                        line-height: 1.6;
+                    }
 
-                .link {
-                    display: inline-block;
+                    .link {
+                        top: 0px;
+                        position: absolute;
+                        text-align: center;
+                    }
+
+                    .more {
+                        font-family: "Source Sans Pro Light";
+                        text-transform: uppercase;
+                        a:after { content: "LEARN MORE" }
+                    }
+
+                    @media (min-width: $screen-sm) {
+                        .more {
+                            position: relative;
+                            @include transition(all, 300ms, ease-out);
+                            @include opacity(0);
+                            top: 50px;
+                        }
+
+                        &:hover .more {
+                            @include opacity(1);
+                            top: 0px;
+                        }
+                    }
                 }
             }
 
         }
+
     }
 
     // Alternate left/right
@@ -151,6 +177,7 @@ body {
             }
         }
     }
+
 }
 
 .chapter-mobile-gray {
