@@ -8,6 +8,11 @@ $fa-font-path: "/bower_components/fontawesome/fonts/";
 @import 'variables';
 @import 'mixins';
 
+// Adapt the twitter bootstrap badge to defined colors
+.badge {
+    background-color: $text-base-even-even-lighter;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -41,12 +46,14 @@ body {
 
 .chapter-intro {
     @extend %chapter-large;
+    padding-bottom: 0px;
     text-align: center;
 
     .container {
         img {
             @include opacity(0.8);
-            margin-bottom: $space-md;
+            margin-top: $space-lg;
+            margin-bottom: $avatar-bottom-overflow;
         }
         .title {
             @extend %title;
@@ -186,34 +193,6 @@ body {
     border-bottom: 1px solid $color-light-gray-darker;
 }
 
-.chapter-oss {
-    @extend .chapter-mobile;
-
-    .vignette {
-        @include make-sm-column(4);
-        text-align: center;
-
-        .image {
-            margin-bottom: $space-sm;
-        }
-
-        .title {
-            @extend %title;
-        }
-
-        .description {
-            color: $text-base-lighter;
-            max-width: 450px;
-            margin: 0px auto;
-        }
-
-        @media (max-width: $screen-sm) {
-            margin-top: $space-xxlg;
-            margin-bottom: $space-xxlg;
-        }
-    }
-}
-
 .chapter-footer {
     @extend %chapter-large;
 
@@ -225,7 +204,7 @@ body {
         color: $text-base-even-lighter;
     }
 
-    i {
+    i.spaced {
         width: 20px;
         margin-right: $space-xsm;
         text-align: right;
