@@ -13,6 +13,10 @@ $fa-font-path: "/bower_components/fontawesome/fonts/";
     background-color: $text-base-even-even-lighter;
 }
 
+a, a:visited {
+    color: #568EB9;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -127,8 +131,20 @@ body {
 
                 .experience {
                     @include clearfix;
-                    margin-bottom: $space-lg;
-                    margin-top: $space-lg;
+                    position: relative;
+                    margin-bottom: $space-xlg;
+                    margin-top: $space-xlg;
+
+                    .link {
+                        position: absolute;
+                        z-index: 30;
+                        width: 100px;
+                        height: 30px;
+                        top: 35px;
+                        left: - $dashed-line-offset - $space-lg - 9px;
+                        background: url('/images/link.png');
+                        @media (max-width: $screen-md) { display: none; }
+                    }
 
                     @media (max-width: $screen-sm) {
                         margin-left: $space-md;
@@ -141,7 +157,6 @@ body {
                         margin-right: $space-md;
                         margin-top: $space-xsm;
                         margin-bottom: $space-xsm;
-                        @include transition(all, 300ms, ease-out);
                     }
 
                     .texts {
@@ -151,7 +166,7 @@ body {
 
                         .title {
                             @extend %title;
-                            line-height: 1.1;
+                            line-height: 1.2;
                             font-size: 2.2em;
                             @media (max-width: $screen-sm) { font-size: 1.8em; }
                             @media (max-width: $screen-xs) { font-size: 1.4em; }
@@ -161,7 +176,7 @@ body {
                             display: block;
                             color: $text-base-even-lighter;
                             max-width: 500px;
-                            line-height: 1.6;
+                            line-height: 1.3;
                         }
                     }
 
