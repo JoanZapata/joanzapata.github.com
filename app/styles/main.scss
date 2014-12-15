@@ -39,19 +39,29 @@ body {
 }
 
 %chapter-large {
-    background: $color-light-gray;
     padding-top: $space-xxlg;
     padding-bottom: $space-xxlg;
+    @media (max-width: $screen-md) {
+        padding-top: $space-lg;
+        padding-bottom: $space-lg;
+    }
 }
 
 .chapter-intro {
     @extend %chapter-large;
+    background: $color-light-gray;
     padding-bottom: 0px;
     text-align: center;
+    background: #efefef; /* Old browsers */
+    background: -moz-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center bottom, 0px, center center, 100%, color-stop(0%, $color-light-gray-darker), color-stop(100%, $color-light-gray)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center bottom, $color-light-gray-darker 0%, #f9f9f9 100%); /* W3C */
 
     .container {
         img {
-            @include opacity(0.8);
             margin-top: $space-lg;
             margin-bottom: $avatar-bottom-overflow;
         }
@@ -85,120 +95,89 @@ body {
 }
 
 .chapter-mobile {
-    padding-top: $space-xxlg;
-    padding-bottom: $space-xxlg;
+    @extend %chapter-large;
     border-bottom: 1px solid $color-white-darker;
 
     .container {
         .row {
-            .images {
-                @include make-sm-column(5);
+            position: relative;
+
+            .date {
+                @include opacity(0.4);
+                position: absolute;
+                left: 0;
+                width: $dashed-line-margin;
                 text-align: right;
-                padding-left: $space-xlg;
-                padding-right: $space-xlg;
-                margin-top: $space-sm;
+                display: block;
+                padding-right: $space-sm;
+                @media (max-width: $screen-md) { display: none; }
             }
 
-            .texts {
-                margin-top: $space-md;
-                margin-bottom: $space-md;
-                @include make-sm-column(7);
-                text-align: left;
+            .dashed-background {
+                position: absolute;
+                background: url('/images/dot.png') $dashed-line-margin top repeat-y;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                @media (max-width: $screen-md) { display: none; }
+            }
 
-                .texts-wrapper {
-                    cursor: pointer;
-                    max-width: 450px;
-                    text-align: center;
-                    display: inline-block;
+            .experiences {
+                @media (min-width: $screen-md) { margin-left: $dashed-line-margin + $dashed-line-offset + $space-lg; }
 
-                    .title {
-                        @extend %title;
+                .experience {
+                    @include clearfix;
+                    margin-bottom: $space-lg;
+                    margin-top: $space-lg;
+
+                    @media (max-width: $screen-sm) {
+                        margin-left: $space-md;
+                        margin-right: $space-md;
                     }
 
-                    .info {
-                        font-family: "Source Sans Pro Light";
-                        color: $text-base-even-even-lighter;
-                        margin-top: $space-xsm;
-                        text-transform: uppercase;
-                    }
-
-                    .description {
-                        display: inline;
-                        color: $text-base-lighter;
-                        line-height: 1.6;
-                    }
-
-                    .link {
-                        top: 0px;
+                    img {
                         position: absolute;
-                        text-align: center;
+                        height: 100px;
+                        margin-right: $space-md;
+                        margin-top: $space-xsm;
+                        margin-bottom: $space-xsm;
+                        @include transition(all, 300ms, ease-out);
                     }
 
-                    .more {
-                        font-family: "Source Sans Pro Light";
-                        text-transform: uppercase;
-                        a:after { content: "LEARN MORE" }
+                    .texts {
+                        margin-left: 100px + $space-md;
+                        text-align: left;
+                        min-height: 100px;
+
+                        .title {
+                            @extend %title;
+                            line-height: 1.1;
+                            font-size: 2.2em;
+                            @media (max-width: $screen-sm) { font-size: 1.8em; }
+                            @media (max-width: $screen-xs) { font-size: 1.4em; }
+                        }
+
+                        .description {
+                            display: block;
+                            color: $text-base-even-lighter;
+                            max-width: 500px;
+                            line-height: 1.6;
+                        }
                     }
 
-                    @media (min-width: $screen-sm) {
-                        .more {
-                            position: relative;
-                            @include transition(all, 300ms, ease-out);
-                            @include opacity(0);
-                            top: 50px;
-                        }
-
-                        &:hover .more {
-                            @include opacity(1);
-                            top: 0px;
-                        }
+                    &:hover {
+                        cursor: pointer;
                     }
                 }
             }
-
-        }
-
-    }
-
-    // Alternate left/right
-    &:nth-child(odd) {
-        .container .row {
-            .images {
-                @include make-sm-column-push(7);
-                text-align: left;
-            }
-            .texts {
-                @include make-sm-column-pull(5);
-                text-align: right;
-            }
         }
     }
-
-    @media (max-width: $screen-sm) {
-        &:nth-child(n) .container .row {
-            .images {
-                text-align: center;
-            }
-            .texts {
-                text-align: center;
-            }
-        }
-    }
-
-}
-
-.chapter-mobile-gray {
-    @extend .chapter-mobile;
-    background: $color-light-gray;
-    border-bottom: 1px solid $color-light-gray-darker;
 }
 
 .chapter-footer {
     @extend %chapter-large;
+    background: $color-light-gray;
 
-    .container .row {
-        margin-bottom: $space-xlg;
-    }
     .title {
         text-transform: uppercase;
         color: $text-base-even-lighter;

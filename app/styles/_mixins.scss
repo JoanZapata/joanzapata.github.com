@@ -18,3 +18,9 @@
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
 }
+
+@mixin grayscale($saturation) {
+    -webkit-filter: grayscale($saturation);
+    -moz-filter: grayscale($saturation);
+    filter: grayscale($saturation);
+}
