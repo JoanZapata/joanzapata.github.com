@@ -182,15 +182,12 @@ body {
                         }
 
                         .extra {
-                            background: white;
+                            background: $color-light-gray;
                             padding: $space-md $space-lg;
                             color: $text-base-even-lighter;
                             margin-top: $space-sm;
                             max-width: 500px;
                             line-height: 1.3;
-                            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
-                            -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
-                            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
 
                             .figures {
                                 font-variant: small-caps;
