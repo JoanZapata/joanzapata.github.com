@@ -185,7 +185,6 @@ body {
                             background: $color-light-gray;
                             padding: $space-md $space-lg;
                             color: $text-base-even-lighter;
-                            margin-top: $space-sm;
                             max-width: 500px;
                             line-height: 1.3;
 
@@ -194,15 +193,16 @@ body {
                             }
                         }
 
-                        &.inline-small {
+                        &.card {
+                            overflow: hidden;
+                            display: block;
+                            height: 0px;
+                            min-height: 0px;
+                            margin-top: $space-sm;
                             @media (max-width: $screen-md) {
                                 margin-left: 0px;
                             }
                         }
-                    }
-
-                    &:hover {
-                        cursor: pointer;
                     }
                 }
             }
