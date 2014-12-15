@@ -187,8 +187,6 @@ body {
                         }
 
                         .extra {
-                            @include transition(all, 300ms, ease-out);
-                            left: 30px;
                             position: relative;
                             background: $color-light-gray;
                             padding: $space-md $space-lg;
@@ -202,7 +200,6 @@ body {
                         }
 
                         &.card {
-                            @include transition(all, 300ms, ease-out);
                             overflow: hidden;
                             display: block;
                             height: 0px;
