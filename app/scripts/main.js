@@ -4,8 +4,6 @@ $(function() {
     });
 });
 
-
-var ANIMATION_DURATION = 300;
 var ANIMATION_SIDE = 30;
 
 // Toggle visibility of a card
@@ -21,10 +19,8 @@ function togglecard(cardId) {
     // Check if card is displayed
     cardElem.toggleClass("card-displayed");
     if (cardElem.hasClass("card-displayed")) {
-        cardElem.animate({height: containerHeight}, ANIMATION_DURATION);
-        child.css({left: ANIMATION_SIDE});
-        child.animate({left: 0, opacity: 1}, ANIMATION_DURATION);
-
+        cardElem.css({height: containerHeight});
+        child.css({left: 0, opacity: 1});
 
         // If open, close others
         $(".card-displayed").each(function() {
@@ -35,8 +31,8 @@ function togglecard(cardId) {
         });
 
     } else {
-        child.animate({left: ANIMATION_SIDE, opacity: 0}, ANIMATION_DURATION);
-        cardElem.animate({height: 0}, ANIMATION_DURATION);
+        child.css({left: ANIMATION_SIDE, opacity: 0});
+        cardElem.css({height: 0});
     }
 
 }
