@@ -182,6 +182,7 @@ body {
                         }
 
                         .extra {
+                            position: relative;
                             background: $color-light-gray;
                             padding: $space-md $space-lg;
                             color: $text-base-even-lighter;

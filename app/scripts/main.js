@@ -5,6 +5,9 @@ $(function() {
 });
 
 
+var ANIMATION_DURATION = 300;
+var ANIMATION_SIDE = 30;
+
 // Toggle visibility of a card
 function togglecard(cardId) {
 
@@ -12,13 +15,17 @@ function togglecard(cardId) {
     var cardElem = $("#" + cardId);
 
     // Use the immediate child as a height reference
-    var containerHeight = cardElem.children().first().outerHeight();
+    var child = cardElem.children().first();
+    var containerHeight = child.outerHeight();
 
     // Check if card is displayed
     cardElem.toggleClass("card-displayed");
     if (cardElem.hasClass("card-displayed")) {
-        cardElem.animate({height: containerHeight, opacity: 1}, 400);
-        
+        cardElem.animate({height: containerHeight}, ANIMATION_DURATION);
+        child.css({left: ANIMATION_SIDE});
+        child.animate({left: 0, opacity: 1}, ANIMATION_DURATION);
+
+
         // If open, close others
         $(".card-displayed").each(function() {
             var id = $(this).attr("id");
@@ -28,7 +35,8 @@ function togglecard(cardId) {
         });
 
     } else {
-        cardElem.animate({opacity: 0, height: 0}, 400);
+        child.animate({left: ANIMATION_SIDE, opacity: 0}, ANIMATION_DURATION);
+        cardElem.animate({height: 0}, ANIMATION_DURATION);
     }
 
 }
