@@ -40,6 +40,11 @@ body {
     font-family: "Source Sans Pro Light";
 }
 
+.clickable:hover {
+    @include noselect();
+    cursor: pointer;
+}
+
 %title {
     font-family: Lanenar;
     font-size: 3em;
@@ -162,7 +167,6 @@ body {
                     }
 
                     .texts {
-                        &:hover { cursor: pointer; }
                         margin-left: 100px + $space-md;
                         text-align: left;
                         min-height: 100px;
