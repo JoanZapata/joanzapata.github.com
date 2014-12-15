@@ -15,11 +15,20 @@ function togglecard(cardId) {
     var containerHeight = cardElem.children().first().outerHeight();
 
     // Check if card is displayed
-    cardElem.toggleClass("displayed");
-    if (cardElem.hasClass("displayed")) {
-        console.log("animate to height " + containerHeight);
+    cardElem.toggleClass("card-displayed");
+    if (cardElem.hasClass("card-displayed")) {
         cardElem.animate({height: containerHeight, opacity: 1}, 400);
+        
+        // If open, close others
+        $(".card-displayed").each(function() {
+            var id = $(this).attr("id");
+            if (id != cardId) {
+                togglecard(id);
+            }
+        });
+
     } else {
         cardElem.animate({opacity: 0, height: 0}, 400);
     }
+
 }
