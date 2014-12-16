@@ -177,6 +177,13 @@ body {
                             font-size: 2.2em;
                             @media (max-width: $screen-sm) { font-size: 1.8em; }
                             @media (max-width: $screen-xs) { font-size: 1.4em; }
+
+                            .side-project {
+                                color: $color-side-project;
+                                font-variant: small-caps;
+                                font-size: 0.6em;
+                                font-family: "Source Sans Pro", "Helvetica Neue";
+                            }
                         }
 
                         .description {
