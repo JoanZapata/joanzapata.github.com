@@ -87,6 +87,8 @@ body {
         img {
             margin-top: $space-lg;
             margin-bottom: $avatar-bottom-overflow;
+            width: 294px;
+            height: 230px;
         }
         .title {
             @extend %title;
