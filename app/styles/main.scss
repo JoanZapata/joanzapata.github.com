@@ -60,6 +60,15 @@ body {
     }
 }
 
+%chapter-small {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+    @media (max-width: $screen-md) {
+        padding-top: $space-md;
+        padding-bottom: $space-md;
+    }
+}
+
 .chapter-intro {
     @extend %chapter-large;
     background: $color-light-gray;
@@ -223,6 +232,18 @@ body {
     }
 }
 
+.chapter-blue {
+    @extend %chapter-small;
+    background: $color-blue;
+    text-align: center;
+    color: white;
+
+    .big {
+        font-size: 3em;
+        font-family: Lanenar;
+    }
+}
+
 .chapter-footer {
     @extend %chapter-large;
     background: $color-light-gray;
@@ -241,5 +262,14 @@ body {
     .copyright {
         text-align: center;
         color: $text-base-even-even-lighter;
+    }
+
+    @media (min-width: $screen-md) {
+        .column-left {
+            border-right: 1px solid $color-light-gray-darker-darker;
+        }
+        .column-right {
+            padding-left: $space-lg;
+        }
     }
 }
