@@ -2,6 +2,15 @@ $(function() {
     $(".texts-wrapper").click(function() {
         location.href = $(this).find("a")[0].href;
     });
+
+    $('.subtitle').slick({
+        vertical: true,
+        autoplay: true,
+        autoplaySpeed: 1100,
+        pauseOnHover: false,
+        swipe: false,
+        touchMove: false
+    });
 });
 
 
@@ -40,3 +49,4 @@ function togglecard(cardId) {
     }
 
 }
+
