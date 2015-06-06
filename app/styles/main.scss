@@ -164,6 +164,7 @@ body {
                         top: 35px;
                         left: - $dashed-line-offset - $space-lg - 10px;
                         background: url('/images/link.png');
+                        background-size: cover;
                         @media (max-width: $screen-md) { display: none; }
                     }
 
