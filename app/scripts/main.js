@@ -5,6 +5,8 @@ $(function() {
 
     $('.subtitle').slick({
         vertical: true,
+        accessibility: false,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 1100,
         pauseOnHover: false,
