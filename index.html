@@ -14,11 +14,12 @@
     <meta name="description" content="Online CV of Joan Zapata, freelance software engineer in Paris, France.">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/04453114.main.css">
+    <link rel="stylesheet" href="styles/4feb4acc.main.css">
 </head>
 <body>
 <!--[if lt IE 10]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your
     experience.</p>
 <![endif]-->
 
@@ -27,10 +28,10 @@
     <div class="container">
         <div class="title">Joan Zapata</div>
         <div class="subtitle">
+            <div>Freelancer</div>
             <div>Software Engineer</div>
             <div>Design Lover</div>
             <div>OSS Contributor</div>
-            <div>Freelancer</div>
         </div>
         <img class="avatar" src="images/fa809fbc.avatar.png">
     </div>
@@ -41,6 +42,81 @@
     <div class="container">
         <div class="row">
             <div class="dashed-background"></div>
+
+            <div class="date">NOW</div>
+
+            <div class="experiences">
+                <div class="experience clearfix">
+                    <div class="image clickable" onclick="togglecard('guillotine')">
+                        <div class="link">&nbsp;</div>
+                        <img src="images/bc7e8813.guillotine.png" alt="Guillotine preview">
+                    </div>
+                    <div class="texts clickable" onclick="togglecard('guillotine')">
+                        <div class="title">Guillotine</div>
+                        <div class="description">
+                            Entirely automated android application testing server, generating performance
+                            reports for the tested applications
+                            <span class="more" id="more-guillotine">more</span>
+                        </div>
+                    </div>
+                    <div id="card-guillotine" class="texts card">
+                        <div class="extra">
+                            Guillotine manages multiple connected devices through ADB, it tests APKs by
+                            installing them on the device and monitoring RAM, CPU, leaks, crashes, etc..
+                            while smartly simulating touch events <strong>or</strong> reproducing a pre-recorded touch
+                            scenario.
+                            <span class="em">
+                                Technically, this project was a good fit for me, it required Android skills
+                                to know how and what to test on APKs, backend skills to properly architecture
+                                the server side and web skills to generate an appealing administration board with
+                                many graphs and reports.
+                            </span>
+
+                            <br><br>
+                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
+                                <i class="fa fa-clock-o"></i> 4 months&nbsp;&nbsp;
+                                <i class="fa fa-building"></i> JCDecaux&nbsp;&nbsp;
+                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience clearfix">
+                    <div class="image clickable" onclick="togglecard('creabri')">
+                        <div class="link">&nbsp;</div>
+                        <img src="images/5afec820.creabri.png" alt="Creabri preview">
+                    </div>
+                    <div class="texts clickable" onclick="togglecard('creabri')">
+                        <div class="title">Créabri</div>
+                        <div class="description">
+                            Android application used by JCDecaux operators to replace the paperwork
+                            needed to send a response to the Paris city bus stops call for tender
+                            <span class="more" id="more-creabri">more</span>
+                        </div>
+                    </div>
+                    <div id="card-creabri" class="texts card">
+                        <div class="extra">
+                            The tablet application allows to fill diagnosis, take augmented reality pictures and
+                            annotate the land register for each bus stop, directly on site.
+                            <span class="em">
+                                On the technical side, this was my first real project deeply based on
+                                <a href="https://github.com/ReactiveX/RxJava">Reactive Java</a>,
+                                and applying all the concepts and metrics from
+                                <a href="http://www.google.com/design/spec/material-design/introduction.html">
+                                    Material Design</a>.
+                            </span>
+
+                            <br><br>
+                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
+                                <i class="fa fa-clock-o"></i> 2 months&nbsp;&nbsp;
+                                <i class="fa fa-building"></i> JCDecaux&nbsp;&nbsp;
+                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="date">2015</div>
 
@@ -60,7 +136,8 @@
                     </div>
                     <div id="card-midpic" class="texts card">
                         <div class="extra">
-                            Developed the Android application, working alongside with two iOS developers to make the app available on both platforms.
+                            Developed the Android application, working alongside with two iOS developers to make the app
+                            available on both platforms.
                             <span class="em">I learnt a lot from Candyshop and I developed <a href="https://github.com/JoanZapata/android-asyncservice">AsyncService</a> to help me develop it faster.</span>
 
                             <br><br>
@@ -84,13 +161,15 @@
                     <div class="texts clickable" onclick="togglecard('s02')">
                         <div class="title">S02 <span class="side-project">side project</span></div>
                         <div class="description">
-                            Android application to help the users keep track of their progress in their multiple TV shows
+                            Android application to help the users keep track of their progress in their multiple TV
+                            shows
                             <span class="more" id="more-s02">more</span>
                         </div>
                     </div>
                     <div id="card-s02" class="texts card">
                         <div class="extra">
-                            Designed and developed a minimalist app with subtle animations, backed by a cloud backend made with Parse.
+                            Designed and developed a minimalist app with subtle animations, backed by a cloud backend
+                            made with <a href="https://parse.com/">Parse</a>.
 
                             <br><br>
                             <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
@@ -111,15 +190,17 @@
                     <div class="texts clickable" onclick="togglecard('avalanche')">
                         <div class="title">Avalanche Tech Group</div>
                         <div class="description">
-                            Android application prototype tracking the usage of the camera, microphone and GPS to alert the user when one is active
+                            Android application prototype tracking the usage of the camera, microphone and GPS to alert
+                            the user when one is active
                             <span class="more" id="more-avalanche">more</span>
                         </div>
                     </div>
                     <div id="card-avalanche" class="texts card">
                         <div class="extra">
-                            Developed a proof of concept for the application. The challenge was to bypass the Android platform restrictions to track the camera,
+                            Developed a proof of concept for the application. The challenge was to bypass the Android
+                            platform restrictions to track the camera,
                             microphone and GPS usage.
-                            <span class="em"> I used the Groovy language on this prototype instead of Java, which was much more readable for all IO operations.</span>
+                            <span class="em"> I used the <a href="http://www.groovy-lang.org/">Groovy</a> language on this prototype instead of Java, which was much more readable for all IO operations.</span>
 
                             <br><br>
                             <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
@@ -149,7 +230,8 @@
                     </div>
                     <div id="card-candyshop" class="texts card">
                         <div class="extra">
-                            Developed the Android application alone, from scratch, catching up on the iOS app started months before me.
+                            Developed the Android application alone, from scratch, catching up on the iOS app started
+                            months before me.
                             <span class="em">I mainly used Androidannotations and Spring REST template, I wrote a lot of custom animated components like radio buttons, partially blurred pictures, pictures swipe, etc...</span>
 
                             <br><br>
@@ -184,7 +266,8 @@
                     </div>
                     <div id="card-dma" class="texts card">
                         <div class="extra">
-                            Graphically designed and developed the initial website using AngularJS, and the backend written with Spring and RESTEasy.
+                            Developed the initial website using AngularJS, and the backend
+                            written with Spring and RESTEasy.
                             <span class="em">The backend includes an Android application generation engine, which generates apps based on the user selected data and settings.</span>
 
                             <br><br>
@@ -208,7 +291,8 @@
                     <div class="texts clickable" onclick="togglecard('memorymap')">
                         <div class="title">Memory Map <span class="side-project">side project</span></div>
                         <div class="description">
-                            Android app that helps users with insufficient disk space to remove their biggest files through an interactive view
+                            Android app that helps users with insufficient disk space to remove their biggest files
+                            through an interactive view
                             <span class="more side" id="more-memorymap">more</span>
                         </div>
                     </div>
@@ -224,7 +308,7 @@
                             <br><br>
                             <span class="figures"><i class="fa fa-user"></i> 1&nbsp;&nbsp;
                                 <i class="fa fa-clock-o"></i> since 2013&nbsp;&nbsp;
-                                <i class="fa fa-users"></i> 48,000 users&nbsp;&nbsp;
+                                <i class="fa fa-users"></i> 110,000 users&nbsp;&nbsp;
                                 <a href="https://play.google.com/store/apps/details?id=com.jzap.memorymap">
                                     <i class="fa fa-link"></i> play store
                                 </a>
@@ -248,7 +332,8 @@
                     </div>
                     <div id="card-jcdecauxdev" class="texts card">
                         <div class="extra">
-                            Graphically designed and developed the website with AngularJS and a java backend based on Spring and RESTEasy. <span class="em">Managed user
+                            Graphically designed and developed the website with AngularJS and a java backend based on
+                            Spring and RESTEasy. <span class="em">Managed user
                             registration, API key generation, the interactive documentation for developers and an administration interface.</span>
 
                             <br><br>
@@ -314,7 +399,8 @@
                     <div class="texts clickable" onclick="togglecard('vuzzz')">
                         <div class="title">VuzZz <span class="side-project">side project</span></div>
                         <div class="description">
-                            Winner app of the Global Android DevCamp 2012 Paris, it gives a rating to any place, based on the density and quality of public
+                            Winner app of the Global Android DevCamp 2012 Paris, it gives a rating to any place, based
+                            on the density and quality of public
                             services around it
                             <span class="more side" id="more-vuzzz">more</span>
                         </div>
@@ -322,7 +408,8 @@
                     <div id="card-vuzzz" class="texts card">
                         <div class="extra">
 
-                            VuzZz was developed during a hackaton in Paris. The theme was open data, we had to find an idea and publish an app within 48 hours.
+                            VuzZz was developed during a hackaton in Paris. The theme was open data, we had to find an
+                            idea and publish an app within 48 hours.
                             <span class="em">I worked both on the server side — Play Framework, hosted in the cloud —, and on the Android side. Funny fact, we published
                             the app so quickly in the last seconds of the event that we could never find the keystore password afterwards. The initial version
                                 is therefore set in stone, no update can ever be made!</span>
@@ -358,7 +445,8 @@
                     </div>
                     <div id="card-capico" class="texts card">
                         <div class="extra">
-                            Developed the Android application from scratch with another developer, as two others developed the iOS app.
+                            Developed the Android application from scratch with another developer, as two others
+                            developed the iOS app.
                             <span class="em">Also worked on the server side, used TDD, written unit and functional tests on both server and Android sides. The app is no more on the Android store, you can find the iOS link below, for reference.</span>
 
                             <br><br>
@@ -448,7 +536,8 @@
 
                 <div class="title">Certifications</div>
                 2013 — <a href="https://www.coursera.org/course/reactive">Principles of Reactive Programming</a> <span class="faded">COURSERA</span><br>
-                2013 — <a href="https://www.coursera.org/course/progfun">Functional Programming Principles in Scala</a> <span class="faded">COURSERA</span><br>
+                2013 — <a href="https://www.coursera.org/course/progfun">Functional Programming Principles in Scala</a>
+                <span class="faded">COURSERA</span><br>
                 2012 — <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=458&get_params=p_track_id:JSE6Prog">Certified
                 Professional Java Programmer</a> <span class="faded">ORACLE</span><br>
                 2011 — <a href="http://web.polytech.univ-nantes.fr/">Engineering Degree</a> <span class="faded">POLYTECH NANTES, FRANCE</span>
@@ -465,31 +554,31 @@
 
                 <div class="title">Side work on Open Source</div>
 
-                <span class="badge">4100<i class="fa fa-star"></i></span>
+                <span class="badge">5200 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/excilys/androidannotations">Android Annotations</a>
                 <span class="faded">CONTRIBUTOR</span><br>
 
-                <span class="badge">865<i class="fa fa-star"></i></span>
+                <span class="badge">1200 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/JoanZapata/android-iconify">Iconify</a>
                 <span class="faded">OWNER</span><br>
 
-                <span class="badge">595<i class="fa fa-star"></i></span>
+                <span class="badge">850 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/JoanZapata/android-pdfview">PDFView</a>
                 <span class="faded">OWNER</span><br>
 
-                <span class="badge">353<i class="fa fa-star"></i></span>
+                <span class="badge">600 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/JoanZapata/base-adapter-helper">Base Adapter Helper</a>
                 <span class="faded">OWNER</span><br>
 
-                <span class="badge">161<i class="fa fa-star"></i></span>
+                <span class="badge">300 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/JoanZapata/android-asyncservice">AsyncService</a>
                 <span class="faded">OWNER</span><br>
 
-                <span class="badge">17<i class="fa fa-star"></i></span>
+                <span class="badge">17 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/JoanZapata/string-format">String Format</a>
                 <span class="faded">OWNER</span><br>
 
-                <span class="badge">5<i class="fa fa-star"></i></span>
+                <span class="badge">5 <i class="fa fa-star"></i></span>
                 <a href="https://github.com/JoanZapata/simple-mapper">Simple Mapper</a>
                 <span class="faded">OWNER</span><br><br>
 
@@ -516,14 +605,16 @@
     </div>
 </div>
 
-<script src="scripts/bb218a37.vendor.js"></script>
+<script src="scripts/d3e31af9.vendor.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    (function(b, o, i, l, e, r) {
+    (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
         b[l] || (b[l] =
-                function() {(b[l].q = b[l].q || []).push(arguments)});
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
         b[l].l = +new Date;
         e = o.createElement(i);
         r = o.getElementsByTagName(i)[0];
@@ -534,8 +625,8 @@
     ga('send', 'pageview');
 </script>
 
-<script src="scripts/d7831088.main.js"></script>
+<script src="scripts/2072c5c0.main.js"></script>
 
-<script src="scripts/c068b51b.plugins.js"></script>
+<script src="scripts/37154bd1.plugins.js"></script>
 </body>
 </html>
