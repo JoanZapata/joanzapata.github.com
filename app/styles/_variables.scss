@@ -3,20 +3,29 @@ $text-base-lighter: lighten($text-base, 20%);
 $text-base-even-lighter: lighten($text-base-lighter, 20%);
 $text-base-even-even-lighter: lighten($text-base-even-lighter, 20%);
 
-$space-xsm: 5px;
+$space-xsm: 9px;
 $space-sm: 16px;
 $space-md: 24px;
 $space-lg: 32px;
-$space-xlg: 44px;
-$space-xxlg: 100px;
+$space-xlg: 50px; // USED
+$space-xxlg: 100px; // USED
 
+// Used
+$color-divider: #D5DEE4;
+$color-text: #48545C;
+$color-text-bright: #61727E;
+$color-gray: #9AA9B2;
+$color-blue: #3CD2D7;
+$color-blue-text: #3CD2D7;
+$color-light-background: #F4F9FB;
+
+// Old ones
 $color-white: #FFF;
 $color-white-darker: darken($color-white, 4%);
 $color-light-gray: #f9f9f9;
 $color-light-gray-darker: darken($color-light-gray, 1%);
 $color-light-gray-darker-darker: darken($color-light-gray, 4%);
 $color-side-project: #56B990;
-$color-blue: #568EB9;
 
 $avatar-bottom-overflow: -50px;
 $dashed-line-margin: 200px;

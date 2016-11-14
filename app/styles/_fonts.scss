@@ -3,3 +3,27 @@
 @include font-face("Lanenar", url('fonts/LANENAR.ttf'));
 @include font-face("Source Sans Pro", url('fonts/SourceSansPro-Regular.ttf'));
 @include font-face("Source Sans Pro Light", url('fonts/SourceSansPro-Light.ttf'));
+
+@font-face {
+  font-family: "Circular";
+  src: url('fonts/CircularStd-Book.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url('fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url('fonts/Quicksand-Regular.otf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url('fonts/Quicksand-Bold.otf') format('truetype');
+  font-weight: bold;
+}

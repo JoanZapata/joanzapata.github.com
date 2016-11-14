@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body>
+<body ng-app="website">
 <!--[if lt IE 10]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your
@@ -28,593 +28,279 @@
 <!-- INTRO -->
 <div class="chapter-intro">
     <div class="container">
-        <div class="title">Joan Zapata</div>
-        <div class="subtitle">
-            <div>Freelancer</div>
-            <div>Software Engineer</div>
-            <div>Android Developer</div>
-            <div>iOS Developer</div>
-            <div>Web Developer</div>
-            <div>Backend Developer</div>
-            <div>Design Lover</div>
-            <div>OSS Contributor</div>
-        </div>
-        <img class="avatar" src="images/avatar.png"/>
+        <div class="header-image"></div>
     </div>
 </div>
 
+<div class="chapter-divider">&nbsp;</div>
 
-<div class="chapter-mobile">
+<div class="chapter">
     <div class="container">
-        <div class="row">
-            <div class="dashed-background"></div>
+        <img class="illustration" src="images/tools.jpg" width="107"/><br/>
 
-            <div class="date">NOW</div>
 
-            <div class="experiences">
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('guillotine')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/guillotine.png" alt="Guillotine preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('guillotine')">
-                        <div class="title">Guillotine</div>
-                        <div class="description">
-                            Entirely automated android application testing server, generating performance
-                            reports for the tested applications
-                            <span class="more" id="more-guillotine">more</span>
-                        </div>
-                    </div>
-                    <div id="card-guillotine" class="texts card">
-                        <div class="extra">
-                            Guillotine manages multiple connected devices through ADB, it tests APKs by
-                            installing them on the device and monitoring RAM, CPU, leaks, crashes, etc..
-                            while smartly simulating touch events <strong>or</strong> reproducing a pre-recorded touch
-                            scenario.
-                            <span class="em">
-                                Technically, this project was a good fit for me, it required Android skills
-                                to know how and what to test on APKs, backend skills to properly architecture
-                                the server side and web skills to generate an appealing administration board with
-                                many graphs and reports.
-                            </span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 4 months&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> JCDecaux&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('creabri')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/creabri.png" alt="Creabri preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('creabri')">
-                        <div class="title">Créabri</div>
-                        <div class="description">
-                            Android application used by JCDecaux operators to replace the paperwork
-                            needed to send a response to the Paris city bus stops call for tender
-                            <span class="more" id="more-creabri">more</span>
-                        </div>
-                    </div>
-                    <div id="card-creabri" class="texts card">
-                        <div class="extra">
-                            The tablet application allows to fill diagnosis, take augmented reality pictures and
-                            annotate the land register for each bus stop, directly on site.
-                            <span class="em">
-                                On the technical side, this was my first real project deeply based on
-                                <a href="https://github.com/ReactiveX/RxJava">Reactive Java</a>,
-                                and applying all the concepts and metrics from
-                                <a href="http://www.google.com/design/spec/material-design/introduction.html">
-                                    Material Design</a>.
-                            </span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 2 months&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> JCDecaux&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                            </span>
-                        </div>
-                    </div>
+        <div class="row skills">
+            <div class="col-md-6 left">
+                <div class="title">Skills</div>
+                <div class="text">
+                    I'm a passionate coder. As such I like writing robust, high-quality code. But I'm also a hobbyist
+                    designer who seeks pixel-perfect UI and seamless UX. I believe in
+                    <a href="http://theleanstartup.com/principles" target="_blank"><b>Lean</b></a> methodology and
+                    user-oriented products.
                 </div>
             </div>
 
-            <div class="date">2015</div>
-
-            <div class="experiences">
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('midpic')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/midpic.png" alt="Midpic preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('midpic')">
-                        <div class="title">Midpic</div>
-                        <div class="description">
-                            Engage conversation with people using a playful mechanism
-                            based on fair trade of selfies
-                            <span class="more" id="more-midpic">more</span>
+            <div class="col-md-5 right">
+                <div class="skill-container">
+                    <div class="skill">
+                        <div class="ios">iOS <span class="bullet">• • • <span class="off"><span class="blinking">•</span> •</span></span>
+                            <img src="images/increase.jpg" width="12px" class="increase bullet"/>
                         </div>
+                        <div class="smaller gray">Swift, AlamoFire, SwiftGen, PureLayout</div>
                     </div>
-                    <div id="card-midpic" class="texts card">
-                        <div class="extra">
-                            Developed the Android application, working alongside with two iOS developers to make the app
-                            available on both platforms.
-                            <span class="em">I learnt a lot from Candyshop and I developed <a
-                                    href="https://github.com/JoanZapata/android-asyncservice">AsyncService</a> to help me develop it faster.</span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 5 months&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> redmill lab&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="http://www.midpic.me/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
+                    <br/>
+                    <div class="skill">
+                        <div class="design">Design <span class="bullet">• • • <span class="off">• •</span></span></div>
+                        <div class="smaller gray">Sketch, Photoshop</div>
                     </div>
-                </div>
-
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('s02')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/s02.png" alt="S02 preview"/>
+                    <br/>
+                    <div class="skill">
+                        <div class="android">Android <span class="bullet">• • • • •</span></div>
+                        <div class="smaller gray">Kotlin, RxJava, Dagger, Retrofit</div>
                     </div>
-                    <div class="texts clickable" onclick="togglecard('s02')">
-                        <div class="title">S02 <span class="side-project">side project</span></div>
-                        <div class="description">
-                            Android application to help the users keep track of their progress in their multiple TV
-                            shows
-                            <span class="more" id="more-s02">more</span>
-                        </div>
+                    <br/>
+                    <div class="skill">
+                        <div class="web">Web <span class="bullet">• • • • <span class="off">•</span></span></div>
+                        <div class="smaller gray">Grunt/Gulp, Bower, AngularJS, SASS</div>
                     </div>
-                    <div id="card-s02" class="texts card">
-                        <div class="extra">
-                            Designed and developed a minimalist app with subtle animations, backed by a cloud backend
-                            made with <a href="https://parse.com/">Parse</a>.
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 1 week&nbsp;&nbsp;
-                                <a href="https://play.google.com/store/apps/details?id=com.joanzap.android.s02">
-                                    <i class="fa fa-link"></i> play store
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('avalanche')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/avalanche.png" alt="Midpic preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('avalanche')">
-                        <div class="title">Avalanche Tech Group</div>
-                        <div class="description">
-                            Android application prototype tracking the usage of the camera, microphone and GPS to alert
-                            the user when one is active
-                            <span class="more" id="more-avalanche">more</span>
-                        </div>
-                    </div>
-                    <div id="card-avalanche" class="texts card">
-                        <div class="extra">
-                            Developed a proof of concept for the application. The challenge was to bypass the Android
-                            platform restrictions to track the camera,
-                            microphone and GPS usage.
-                            <span class="em"> I used the <a href="http://www.groovy-lang.org/">Groovy</a> language on this prototype instead of Java, which was much more readable for all IO operations.</span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 2 weeks&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> avalanche&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> australia&nbsp;&nbsp;
-                                <a href="http://avalanche.com.au/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('candyshop')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/candyshop.png" alt="Candyshop preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('candyshop')">
-                        <div class="title">Candyshop</div>
-                        <div class="description">
-                            Seduction in real life is really hard, Candyshop makes it a lot
-                            sweeter and funnier
-                            <span class="more" id="more-candyshop">more</span>
-                        </div>
-                    </div>
-                    <div id="card-candyshop" class="texts card">
-                        <div class="extra">
-                            Developed the Android application alone, from scratch, catching up on the iOS app started
-                            months before me.
-                            <span class="em">I mainly used Androidannotations and Spring REST template, I wrote a lot of custom animated components like radio buttons, partially blurred pictures, pictures swipe, etc...</span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 5 months&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> redmill lab&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="http://www.entercandyshop.com/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
+                    <br/>
+                    <div class="skill">
+                        <div class="backend">Backend <span class="bullet">• • • • <span class="off">•</span></span></div>
+                        <div class="smaller gray">Java, Scala, Spring, Hibernate, AWS</div>
                     </div>
                 </div>
             </div>
-
-            <div class="date">2014</div>
-
-            <div class="experiences">
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('dma')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/dma.png" alt="Design My App preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('dma')">
-                        <div class="title">Design My App</div>
-                        <div class="description">
-                            Online tool to quickly generate a fully working Android app
-                            based on open data services, CSV files, or Open Office documents
-                            <span class="more" id="more-dma">more</span>
-                        </div>
-                    </div>
-                    <div id="card-dma" class="texts card">
-                        <div class="extra">
-                            Developed the initial website using AngularJS, and the backend
-                            written with Spring and RESTEasy.
-                            <span class="em">The backend includes an Android application generation engine, which generates apps based on the user selected data and settings.</span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 2&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 3 months&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> ebiz&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="http://www.designmyapp.mobi/#/dma/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('memorymap')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/memorymap.png" alt="Memory Map preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('memorymap')">
-                        <div class="title">Memory Map <span class="side-project">side project</span></div>
-                        <div class="description">
-                            Android app that helps users with insufficient disk space to remove their biggest files
-                            through an interactive view
-                            <span class="more side" id="more-memorymap">more</span>
-                        </div>
-                    </div>
-                    <div id="card-memorymap" class="texts card">
-                        <div class="extra">
-
-                            This app made me go through the whole lifecycle of a product on my own.
-                            <span class="em">I went from the initial idea to the final release, including the design, development, communication and monetization.
-                                Technically, I learnt a lot about the Android Canvas API and rendering optimization, which is crucial for creating graphically
-                                unique animated custom components.
-                            </span>
-
-                            <br><br>
-                            <span class="figures"><i class="fa fa-user"></i> 1&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> since 2013&nbsp;&nbsp;
-                                <i class="fa fa-users"></i> 170,000 users&nbsp;&nbsp;
-                                <a href="https://play.google.com/store/apps/details?id=com.jzap.memorymap">
-                                    <i class="fa fa-link"></i> play store
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('jcdecauxdev')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/jcdecauxdev.png" alt="JCDecaux Developer preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('jcdecauxdev')">
-                        <div class="title">Jcdecaux Developer</div>
-                        <div class="description">
-                            All bike sharing service data made available to all developers
-                            through a dedicated website and API
-                            <span class="more" id="more-jcdecauxdev">more</span>
-                        </div>
-                    </div>
-                    <div id="card-jcdecauxdev" class="texts card">
-                        <div class="extra">
-                            Graphically designed and developed the website with AngularJS and a java backend based on
-                            Spring and RESTEasy. <span class="em">Managed user
-                            registration, API key generation, the interactive documentation for developers and an administration interface.</span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 2&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 1 month&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> jcdecaux&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="https://developer.jcdecaux.com/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="date">2013</div>
-
-
-            <div class="experiences">
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('livetouch')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/livetouch.png" alt="Livetouch preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('livetouch')">
-                        <div class="title">Livetouch</div>
-                        <div class="description">
-                            Fully connected 42" tactile screens embedded into JCDecaux
-                            bus shelters, kiosks, toilet facilities
-                            <span class="more" id="more-livetouch">more</span>
-                        </div>
-                    </div>
-                    <div id="card-livetouch" class="texts card">
-                        <div class="extra">
-                            Designed, developed and deployed in production a distributed system with many actors :<br>
-                            <span class="em">
-                                — A real-time administration interface written with GWT<br>
-                                — A distributed server with webservices based on Spring<br>
-                                — An Android service running as root on all devices<br>
-                                — MQTT brokers for real-time communications<br>
-                                — Cassandra databases for usage stats and logs<br>
-                                — A MySQL database for relational data<br>
-                            </span>
-
-                            <br>
-                            <span class="figures"><i class="fa fa-users"></i> 4&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 2 years&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> jcdecaux&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="http://www.jcdecaux.com/en/Innovation-Design/JCDecaux-s-Intelligent-Street-Furniture">
-                                    <i class="fa fa-link"></i> about livetouch
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('vuzzz')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/vuzzz.png" alt="VuzZz preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('vuzzz')">
-                        <div class="title">VuzZz <span class="side-project">side project</span></div>
-                        <div class="description">
-                            Winner app of the Global Android DevCamp 2012 Paris, it gives a rating to any place, based
-                            on the density and quality of public
-                            services around it
-                            <span class="more side" id="more-vuzzz">more</span>
-                        </div>
-                    </div>
-                    <div id="card-vuzzz" class="texts card">
-                        <div class="extra">
-
-                            VuzZz was developed during a hackaton in Paris. The theme was open data, we had to find an
-                            idea and publish an app within 48 hours.
-                            <span class="em">I worked both on the server side — Play Framework, hosted in the cloud —, and on the Android side. Funny fact, we published
-                            the app so quickly in the last seconds of the event that we could never find the keystore password afterwards. The initial version
-                                is therefore set in stone, no update can ever be made!</span>
-
-                            <br><br>
-                            <span class="figures"><i class="fa fa-users"></i> 4&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 48 hours&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="http://www.vuzzz.com/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="date">2012</div>
-
-            <div class="experiences">
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('capico')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/capico.png" alt="Capico preview"/>
-                    </div>
-                    <div class="texts clickable" onclick="togglecard('capico')">
-                        <div class="title">Capico</div>
-                        <div class="description">
-                            A digital workbook for a class of student, with lessons and
-                            exercises, and real-time feedback for the teacher
-                            <span class="more" id="more-capico">more</span>
-                        </div>
-                    </div>
-                    <div id="card-capico" class="texts card">
-                        <div class="extra">
-                            Developed the Android application from scratch with another developer, as two others
-                            developed the iOS app.
-                            <span class="em">Also worked on the server side, used TDD, written unit and functional tests on both server and Android sides. The app is no more on the Android store, you can find the iOS link below, for reference.</span>
-
-                            <br/><br/>
-                            <span class="figures"><i class="fa fa-users"></i> 2&nbsp;&nbsp;
-                                <i class="fa fa-clock-o"></i> 5 months&nbsp;&nbsp;
-                                <i class="fa fa-building"></i> ebiz&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> paris&nbsp;&nbsp;
-                                <a href="https://itunes.apple.com/TR/app/id447338002">
-                                    <i class="fa fa-link"></i> apple store
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="date">2011</div>
-
-            <div class="experiences">
-                <div class="experience clearfix">
-                    <div class="image clickable" onclick="togglecard('polytech')">
-                        <div class="link">&nbsp;</div>
-                        <img src="images/polytech.png" alt="Capico preview"/>
-                    </div>
-                    <div class="texts" onclick="togglecard('polytech')">
-                        <div class="title">Polytech Nantes</div>
-                        <div class="description">
-                            Engineering degree in computer sciences<br>
-                            Options software and network
-                            <span class="more" id="more-polytech">more</span>
-                        </div>
-                    </div>
-                    <div id="card-polytech" class="texts card">
-                        <div class="extra">
-                            Software engineering, networks, data mining, signal processing, applied Mathematics,...
-                            <span class="em">My last internship was in Utah, USA, where I developed a training program written in Flex for the aviation department of the Utah Valley University, including a lot of gamification.</span>
-
-                            <br/><br/>
-                            <span class="figures">
-                                <i class="fa fa-clock-o"></i> 5 years&nbsp;&nbsp;
-                                <i class="fa fa-map-marker"></i> Nantes&nbsp;&nbsp;
-                                <a href="http://web.polytech.univ-nantes.fr/">
-                                    <i class="fa fa-link"></i> website
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
 
-<div class="chapter-blue">
+<div class="chapter-divider">&nbsp;</div>
+
+<div class="chapter">
     <div class="container">
-        <div class="big">I'm a freelancer</div>
-        <span class="faded">Want me in your team?</span>
-        zapata.joan@gmail.com
+
+        <img class="illustration" src="images/pencils.jpg" width="109"/><br/>
+        <div class="title">Last article</div>
+        <br/>
+        <div class="text">
+            Android to iOS in 10 days<br/>
+            <div class="smaller">
+                “ A few months ago I dropped my Android phone to buy an iPhone SE, mostly because I was looking for a good 4" phone, but … ”
+                <a class="more" href="http://blog.joanzapata.com/android-to-ios-in-10-days/" target="_blank">MORE</a>
+            </div>
+            <span class="small gray">
+                SEPT 28, 2016
+            </span>
+        </div>
+
     </div>
 </div>
 
-<div class="chapter-footer">
+<div class="chapter-divider">&nbsp;</div>
+
+<div class="chapter half">
     <div class="container">
 
-        <div class="row">
-            <div class="col-md-6 column-left">
+        <img class="illustration" src="images/workspace.jpg" width="149"/><br/>
+        <div class="title">Work</div>
+        <br/>
+        <div class="text">
+            15 years ago I started crafting community websites as a kid. I now have an engineering degree and
+            5 years of work experience. Here are some of the projects I've been working on.
+        </div>
+    </div>
+</div>
 
-                <div class="title">Social links</div>
-                <a href="http://twitter.com/JoanZap">
-                    <i class="fa fa-twitter spaced"></i>&nbsp;twitter.com/JoanZap</a><br/>
-                <a href="https://github.com/JoanZapata">
-                    <i class="fa fa-github spaced"></i>&nbsp;github.com/JoanZapata</a><br/>
-                <a href="http://fr.linkedin.com/in/joanz/">
-                    <i class="fa fa-linkedin spaced"></i>&nbsp;fr.linkedin.com/in/joanz</a><br/>
-                <a href="http://careers.stackoverflow.com/joanzapata">
-                    <i class="fa fa-signal spaced"></i>&nbsp;careers.stackoverflow.com/joanzapata</a><br/>
-                <a href="http://fr.viadeo.com/fr/profile/joan.zapata">
-                    <i class="fa fa-circle spaced"></i>&nbsp;fr.viadeo.com/fr/profile/joan.zapata</a><br><br>
+<div class="work" ng-controller="JobsController">
 
-                <div class="title">Given trainings</div>
-                2014 — AngularJS and Responsive Design at <a href="http://ebusinessinformation.fr/">eBiz, Paris</a><br/>
-                2012 — Java/JEE at <a href="http://www.isep.fr/">ISEP, Paris</a><br/>
-                2012 — Android at <a href="http://ebusinessinformation.fr/">eBiz, Paris</a><br/>
-                2011 — Java/JEE at <a href="http://www.epf.fr/en">EPF, Paris</a><br/><br/>
+    <div class="head">&nbsp;</div>
 
-                <div class="title">Certifications</div>
-                2013 — <a href="https://www.coursera.org/course/reactive">Principles of Reactive Programming</a> <span
-                    class="faded">COURSERA</span><br/>
-                2013 — <a href="https://www.coursera.org/course/progfun">Functional Programming Principles in Scala</a>
-                <span class="faded">COURSERA</span><br/>
-                2012 — <a
-                    href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=458&get_params=p_track_id:JSE6Prog">Certified
-                Professional Java Programmer</a> <span class="faded">ORACLE</span><br/>
-                2011 — <a href="http://web.polytech.univ-nantes.fr/">Engineering Degree</a> <span class="faded">POLYTECH NANTES, FRANCE</span>
+    <div class="chapter-experience" ng-repeat="job in jobs track by $index">
+        <div class="title" ng-class="{'side': job.side}" id="title-{{$index}}" ng-click="togglecard($index)">
+            <div class="content">
+                <div class="side">
+                    <div class="name">{{job.name}}</div>
+                    <div class="year">{{job.date}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="card-{{$index}}">
+            <div class="container" ng-click="togglecard($index)">
+                <div class="card-icon">
+                    <img ng-src="{{job.icon}}" height="50px"/>
+                </div>
+                <div class="card-title">
+                    {{job.name}}
+                </div>
+                <div class="card-subtitle">
+                    <span ng-show="job.side == undefined">{{job.company}}<br></span>
+                    {{job.date}}
+                </div>
+                <div class="card-screenshots" ng-show="job.screenshots">
+                    <img ng-repeat="screenshot in job.screenshots"
+                         ng-src="images/screenshots/{{screenshot}}"
+                         height="200px"
+                         ng-click="openScreenshot(screenshot); $event.stopPropagation();"/>
+                </div>
+                <p class="card-description" ng-bind-html="job.description">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="title">2011</div>
+        <div class="school">
+            Polytech Nantes<br>
+            Engineering School
+        </div>
+    </div>
+</div>
+
+<div class="chapter-divider">&nbsp;</div>
+
+<div class="chapter">
+    <div class="container">
+
+        <div class="title">More</div>
+
+        <div class="row misc">
+            <div class="col-md-offset-1 col-md-6">
+
+                <div class="subheader">Social links</div>
+                <a href="http://twitter.com/JoanZap" target="_blank">
+                    <i class="fa fa-twitter fa-2x social"></i></a>&nbsp;&nbsp;
+                <a href="http://fr.linkedin.com/in/joanz/" target="_blank">
+                    <i class="fa fa-linkedin-square fa-2x social"></i></a>&nbsp;&nbsp;
+                <a href="https://github.com/JoanZapata" target="_blank">
+                    <i class="fa fa-github fa-2x social"></i></a><br/><br/>
+
+                <div class="subheader">Given trainings</div>
+                AngularJS and Responsive Design at <a href="http://ebusinessinformation.fr/">eBiz, Paris</a>
+                <span class="small gray">2014</span></span><br/>
+                Java/JEE at <a href="http://www.isep.fr/">ISEP, Paris</a>
+                <span class="small gray">2012</span><br/>
+                Android at <a href="http://ebusinessinformation.fr/">eBiz, Paris</a>
+                <span class="small gray">2012</span><br/>
+                Java/JEE at <a href="http://www.epf.fr/en">EPF, Paris</a>
+                <span class="small gray">2011</span><br/><br/>
+
+                <div class="subheader">Certifications</div>
+                <a href="https://www.coursera.org/course/reactive" target="_blank">Principles of Reactive
+                    Programming</a> <span
+                    class="small gray">COURSERA 2013</span><br/>
+                <a href="https://www.coursera.org/course/progfun" target="_blank">Functional Programming
+                    Principles
+                    in
+                    Scala</a>
+                <span class="small gray">COURSERA 2013</span><br/>
+                <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=458&get_params=p_track_id:JSE6Prog"
+                   target="_blank">Certified Professional Java Programmer</a> <span
+                    class="small gray">ORACLE 2012</span><br/>
+                <a href="http://web.polytech.univ-nantes.fr/" target="_blank">Engineering Degree</a> <span
+                    class="small gray">POLYTECH NANTES, FRANCE 2011</span>
 
             </div>
             <div class="visible-xs visible-sm">
                 <br>
             </div>
-            <div class="col-md-6 column-right">
+            <div class="col-md-5">
 
-                <div class="title">Blog</div>
+                <div class="subheader">Blog</div>
 
-                <a href="http://blog.joanzapata.com/">blog.joanzapata.com</a><br><br>
+                <a href="http://blog.joanzapata.com/" target="_blank"><span class="gray">http://</span>blog.joanzapata.com</a><br><br>
 
-                <div class="title">Side work on Open Source</div>
+                <div class="subheader">Side work on Open Source</div>
 
                 <span class="badge">8400 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/excilys/androidannotations">Android Annotations</a>
-                <span class="faded">CONTRIBUTOR</span><br>
+                <a href="https://github.com/excilys/androidannotations" target="_blank">Android Annotations</a>
+                <span class="small gray">CONTRIBUTOR</span><br>
 
                 <span class="badge">2600 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/JoanZapata/android-iconify">Iconify</a>
-                <span class="faded">OWNER</span><br>
+                <a href="https://github.com/JoanZapata/android-iconify" target="_blank">Iconify</a>
+                <span class="small gray">OWNER</span><br>
 
                 <span class="badge">1700 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/JoanZapata/android-pdfview">PDFView</a>
-                <span class="faded">OWNER</span><br>
+                <a href="https://github.com/JoanZapata/android-pdfview" target="_blank">PDFView</a>
+                <span class="small gray">OWNER</span><br>
 
                 <span class="badge">1450 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/JoanZapata/base-adapter-helper">Base Adapter Helper</a>
-                <span class="faded">OWNER</span><br>
+                <a href="https://github.com/JoanZapata/base-adapter-helper" target="_blank">Base Adapter
+                    Helper</a>
+                <span class="small gray">OWNER</span><br>
 
                 <span class="badge">340 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/JoanZapata/android-asyncservice">AsyncService</a>
-                <span class="faded">OWNER</span><br>
+                <a href="https://github.com/JoanZapata/android-asyncservice" target="_blank">AsyncService</a>
+                <span class="small gray">OWNER</span><br>
 
                 <span class="badge">35 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/JoanZapata/string-format">String Format</a>
-                <span class="faded">OWNER</span><br>
+                <a href="https://github.com/JoanZapata/string-format" target="_blank">String Format</a>
+                <span class="small gray">OWNER</span><br>
 
                 <span class="badge">5 <i class="fa fa-star"></i></span>
-                <a href="https://github.com/JoanZapata/simple-mapper">Simple Mapper</a>
-                <span class="faded">OWNER</span><br><br>
+                <a href="https://github.com/JoanZapata/simple-mapper" target="_blank">Simple Mapper</a>
+                <span class="small gray">OWNER</span><br><br>
 
-                <div class="title">Last read books</div>
-                <a href="https://www.amazon.fr/iOS-Programming-Nerd-Ranch-Guide/dp/0134390733">iOS Programming</a>
-                <span class="faded">THE BIG NERD RANCH</span><br/>
-                <a href="http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898/ref=sr_1_1?ie=UTF8&qid=1402735953&sr=8-1&keywords=the+lean+startup">
-                    The Lean Startup</a> <span class="faded">ERIC RIES</span><br/>
-                <a href="http://www.manning.com/muschko/">Gradle in Action</a> <span
-                    class="faded">BENJAMIN MUSCHKO</span><br/>
-                <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683">Effective Java 2</a>
-                <span class="faded">JOSHUA BLOSH</span><br/>
-                <a href="http://shop.oreilly.com/product/9780596007126.do">Head First Design Patterns</a>
-                <span class="faded">FREEMAN, ROBSON, BATES, SIERRA</span><br/>
-                <a href="https://www.amazon.fr/Android-Programming-Nerd-Ranch-Guide/dp/0134171454">Android
+                <div class="subheader">Last read books</div>
+                <a href="https://www.amazon.fr/iOS-Programming-Nerd-Ranch-Guide/dp/0134390733" target="_blank">iOS
                     Programming</a>
-                <span class="faded">THE BIG NERD RANCH</span>
+                <span class="small gray">THE BIG NERD RANCH</span><br/>
+                <a href="http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898/ref=sr_1_1?ie=UTF8&qid=1402735953&sr=8-1&keywords=the+lean+startup"
+                   target="_blank">
+                    The Lean Startup</a> <span class="small gray">ERIC RIES</span><br/>
+                <a href="http://www.manning.com/muschko/" target="_blank">Gradle in Action</a> <span
+                    class="small gray">BENJAMIN MUSCHKO</span><br/>
+                <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683"
+                   target="_blank">Effective
+                    Java 2</a>
+                <span class="small gray">JOSHUA BLOSH</span><br/>
+                <a href="http://shop.oreilly.com/product/9780596007126.do" target="_blank">Head First Design
+                    Patterns</a>
+                <span class="small gray">FREEMAN, ROBSON, BATES, SIERRA</span><br/>
+                <a href="https://www.amazon.fr/Android-Programming-Nerd-Ranch-Guide/dp/0134171454"
+                   target="_blank">Android
+                    Programming</a>
+                <span class="small gray">THE BIG NERD RANCH</span>
 
 
             </div>
         </div>
 
         <div class="clearfix"></div>
-        <br>
 
-        <hr/>
-        <div class="copyright">
+    </div>
+</div>
+
+<div class="chapter-divider">&nbsp;</div>
+
+<div class="chapter">
+    <div class="container">
+
+        <img class="illustration" src="images/email.jpg" width="83px"/><br/>
+        <span class="contact">
+            You have a project? Let's talk!<br/>
+            <a href="mailto:zapata.joan@gmail.com" target="_blank">
+                Send me an email
+            </a>
+        </span>
+
+    </div>
+</div>
+
+<div class="chapter-footer">
+    <div class="container">
+        <div class="copyright smaller">
             Design and development by Joan Zapata © 2016 <br/>
             <a href="https://github.com/JoanZapata/joanzapata.github.com">Sources are on Github</a>
         </div>
@@ -645,9 +331,6 @@
     ga('send', 'pageview');
 </script>
 
-<!-- build:js scripts/main.js -->
-<script src="scripts/main.js"></script>
-<!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
 <script src="bower_components/sass-bootstrap/js/affix.js"></script>
@@ -664,6 +347,15 @@
 <script src="bower_components/sass-bootstrap/js/tab.js"></script>
 <script src="bower_components/slick-carousel/slick/slick.js"></script>
 <script src="bower_components/jquery.transit/jquery.transit.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<script src="scripts/jobs.js"></script>
+<!-- endbuild -->
+
+<!-- <script src="bower_components/angular/angular.min.js"></script> -->
 </body>
 </html>

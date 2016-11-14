@@ -9,286 +9,467 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 @import 'variables';
 @import 'mixins';
 
+$breakpoint-580: 880px;
+$breakpoint-320: 580px;
+
 // Adapt the twitter bootstrap badge to defined colors
 .badge {
-    background-color: $text-base-even-even-lighter;
+  background-color: $color-divider;
 }
 
-a, a:visited {
-    color: #568EB9;
+a {
+  &, &:visited, &:focus {
+    color: $color-blue;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  &:hover {
+    color: darken($color-blue, 10%);
+    text-decoration: none;
+  }
 }
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 body {
-    font-family: "Source Sans Pro", "Helvetica Neue";
-    line-height: 1.5;
-    font-size: 18px;
-    color: $text-base;
-    @media (max-width: $screen-xs) { font-size: 15px; }
+  font-family: "Circular", " Helvetica Neue", sans-serif;
+  line-height: 1.9;
+  font-size: 20px;
+  color: $color-text;
+  @media (max-width: $breakpoint-320) { font-size: 16px; }
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .faded {
-    @include opacity(0.4);
+  @include opacity(0.4);
 }
 
-.em {
-    font-family: "Source Sans Pro Light";
+.small {
+  font-size: 13px;
+}
+
+.smaller {
+  font-size: 0.85em;
+}
+
+.big {
+  font-family: "Quicksand", serif;
+  font-size: 1.65em;
+}
+
+.gray {
+  color: $color-gray;
+}
+
+.contact {
+  font-weight: bold;
 }
 
 .clickable:hover {
-    @include noselect();
-    cursor: pointer;
-}
-
-%title {
-    font-family: Lanenar;
-    font-size: 3em;
-    line-height: 1.4;
+  @include noselect();
+  cursor: pointer;
 }
 
 %chapter-large {
-    padding-top: $space-xxlg;
-    padding-bottom: $space-xxlg;
-    @media (max-width: $screen-md) {
-        padding-top: $space-lg;
-        padding-bottom: $space-lg;
-    }
+  display: block;
+  text-align: center;
+  padding-top: $space-xxlg;
+  padding-bottom: $space-xxlg;
+  &.half { padding-bottom: $space-md; }
+
+  @media (max-width: $breakpoint-320) {
+    padding-top: $space-xlg;
+    padding-bottom: $space-xlg;
+  }
 }
 
-%chapter-small {
-    padding-top: $space-lg;
-    padding-bottom: $space-lg;
-    @media (max-width: $screen-md) {
-        padding-top: $space-md;
-        padding-bottom: $space-md;
-    }
+.chapter-divider {
+  display: block;
+  clear: both;
+  height: 15px;
+  width: 108px;
+  margin: 0px auto;
+  background: url(../images/divider.png);
+  background-size: cover;
 }
+
+/// INTRO
 
 .chapter-intro {
-    @extend %chapter-large;
-    background: $color-light-gray;
-    padding-bottom: 0px;
-    text-align: center;
-    background: #efefef; /* Old browsers */
-    background: -moz-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center bottom, 0px, center center, 100%, color-stop(0%, $color-light-gray-darker), color-stop(100%, $color-light-gray)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center bottom, ellipse cover, $color-light-gray-darker 0%, $color-light-gray 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center bottom, $color-light-gray-darker 0%, #f9f9f9 100%); /* W3C */
+  @extend %chapter-large;
 
-    .container {
-        img {
-            margin-top: $space-lg;
-            margin-bottom: $avatar-bottom-overflow;
-            width: 294px;
-            height: 230px;
-        }
-        .title {
-            @extend %title;
-        }
-        .subtitle {
-            @extend %title;
-            color: $text-base-even-lighter;
+  .container {
+    .header-image {
+      display: inline-block;
+      width: 880px;
+      height: 582px;
+      background: url(../images/header880.jpg);
+      background-size: cover;
 
-            @media (max-width: $screen-xs) {
-                font-size: 2em;
-            }
-        }
+      @media (max-width: $breakpoint-580) {
+        width: 580px;
+        height: 555px;
+        background: url(../images/header580.jpg);
+        background-size: cover;
+      }
+      @media (max-width: $breakpoint-320) {
+        width: 320px;
+        height: 296px;
+        background: url(../images/header320.jpg);
+        background-size: cover;
+      }
     }
+  }
 }
 
-.chapter-title {
-    position: relative;
-    text-align: center;
-    height: 0px;
+/// ALL CHAPTERS
 
-    .text {
-        top: -13px;
-        width: 100%;
-        position: absolute;
-        line-height: 1.2;
-        color: $text-base-even-even-lighter;
-        @include white-shadow();
-    }
-}
+.chapter {
+  @extend %chapter-large;
+  img.illustration {
+    margin-bottom: $space-xlg;
+    max-width: 17%;
+  }
 
-.chapter-mobile {
-    @extend %chapter-large;
-    border-bottom: 1px solid $color-white-darker;
-
-    .container {
-        .row {
-            position: relative;
-
-            .date {
-                @include opacity(0.4);
-                position: absolute;
-                left: 0;
-                width: $dashed-line-margin;
-                text-align: right;
-                display: block;
-                padding-right: $space-sm;
-                @media (max-width: $screen-md) { display: none; }
-            }
-
-            .dashed-background {
-                position: absolute;
-                background: url('/images/dot.png') $dashed-line-margin top repeat-y;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                @media (max-width: $screen-md) { display: none; }
-            }
-
-            .experiences {
-                @media (min-width: $screen-md) { margin-left: $dashed-line-margin + $dashed-line-offset + $space-lg; }
-
-                .experience {
-                    @include clearfix;
-                    position: relative;
-                    margin-bottom: $space-xlg;
-                    margin-top: $space-xlg;
-
-                    .link {
-                        position: absolute;
-                        z-index: 30;
-                        width: 100px;
-                        height: 30px;
-                        top: 35px;
-                        left: - $dashed-line-offset - $space-lg - 10px;
-                        background: url('/images/link.png');
-                        background-size: cover;
-                        @media (max-width: $screen-md) { display: none; }
-                    }
-
-                    @media (max-width: $screen-sm) {
-                        margin-left: $space-md;
-                        margin-right: $space-md;
-                    }
-
-                    img {
-                        position: absolute;
-                        height: 100px;
-                        margin-right: $space-md;
-                    }
-
-                    .texts {
-                        margin-left: 100px + $space-md;
-                        text-align: left;
-                        min-height: 100px;
-
-                        .title {
-                            @extend %title;
-                            line-height: 1.2;
-                            font-size: 2.2em;
-                            @media (max-width: $screen-sm) { font-size: 1.8em; }
-                            @media (max-width: $screen-xs) { font-size: 1.4em; }
-
-                            .side-project {
-                                color: $color-side-project;
-                                font-variant: small-caps;
-                                font-size: 0.6em;
-                                font-family: "Source Sans Pro", "Helvetica Neue";
-                            }
-                        }
-
-                        .description {
-                            display: block;
-                            color: $text-base-even-lighter;
-                            max-width: 500px;
-                            line-height: 1.3;
-
-                            .more {
-                                font-variant: small-caps;
-                                color: $color-blue;
-
-                                &.side {
-                                    color: $color-side-project;
-                                }
-                            }
-                        }
-
-                        .extra {
-                            position: relative;
-                            background: $color-light-gray;
-                            padding: $space-md $space-lg;
-                            color: $text-base-even-lighter;
-                            max-width: 500px;
-                            line-height: 1.3;
-
-                            .figures {
-                                font-variant: small-caps;
-                            }
-                        }
-
-                        &.card {
-                            overflow: hidden;
-                            display: block;
-                            height: 0px;
-                            min-height: 0px;
-                            margin-top: $space-sm;
-                            @media (max-width: $screen-md) {
-                                margin-left: 0px;
-                            }
-                        }
-
-                        &.clickable:hover {
-                            .more {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.chapter-blue {
-    @extend %chapter-small;
-    background: $color-blue;
-    text-align: center;
+  .title {
+    @include border-radius(40px);
+    display: inline-block;
+    background: $color-divider;
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 13px;
+    width: auto;
+    padding: 0px $space-xsm;
     color: white;
+  }
 
-    .big {
-        font-size: 3em;
-        font-family: Lanenar;
+  .text {
+    max-width: 590px;
+    margin: 0px auto;
+  }
+
+  .subheader {
+    font-size: 13px;
+    font-weight: bold;
+    color: $color-gray;
+    text-transform: uppercase;
+  }
+
+  .more {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  // Special case for the skills section
+  .skills {
+    .left {
+      text-align: right;
+      padding-right: $space-md;
+
+      @media(max-width: $screen-md) {
+        text-align: center;
+        margin-bottom: $space-lg;
+      }
     }
+    .right {
+      padding-left: $space-md;
+      text-align: left;
+      font-weight: bold;
+      line-height: 1.5;
+      .bullet {
+        font-size: 1.5em;
+        position: relative;
+        top: 3px;
+        left: $space-sm;
+      }
+      .increase {
+        top: 0;
+        left: $space-sm + 4px;
+      }
+      .skill-container {
+        text-align: left;
+        display: inline-block;
+      }
+      .skill {
+        margin-bottom: $space-md;
+        display: inline-block;
+      }
+      $gray-dot: lighten($color-divider, 10%);
+      .smaller { font-weight: normal; }
+      .off { color: $gray-dot; }
+      .ios { color: #3CD2D7; }
+      .design { color: #D66883; }
+      .android { color: #9CD168; }
+      .web { color: #D7AF4C; }
+      .backend { color: #D17759; }
+      .blinking {
+        animation-duration: 600ms;
+        animation-name: blink;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        -webkit-animation: blink 600ms infinite;
+        -webkit-animation-direction: alternate;
+      }
+
+      @keyframes blink {
+        from {
+          color: $gray-dot;
+        }
+        to {
+          color: #3CD2D7;
+        }
+      }
+      @-webkit-keyframes blink {
+        from {
+          color: $gray-dot;
+        }
+        to {
+          color: #3CD2D7;
+        }
+      }
+
+      @media(max-width: $screen-md) {
+        text-align: center;
+      }
+    }
+  }
+
+  // Special case for the misc section
+  .misc {
+    text-align: left;
+    margin-top: $space-xlg;
+    font-size: 0.85em;
+
+    .social {
+      display: inline-block;
+      margin-top: $space-xsm;
+      color: $color-blue;
+      &:hover {
+        color: $color-blue-text;
+      }
+    }
+  }
 }
+
+/// FOOTER
 
 .chapter-footer {
-    @extend %chapter-large;
-    background: $color-light-gray;
+  @extend %chapter-large;
+  background: $color-blue;
+  color: transparentize(white, 0.15);
 
+  a {
+    &, &:visited, &:focus {
+      text-decoration: underline;
+      color: transparentize(white, 0.15);
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+/// WORK
+
+.work {
+  text-align: center;
+  padding-bottom: $space-xxlg;
+  @media (max-width: $breakpoint-320) {
+    padding-bottom: $space-xlg;
+  }
+
+  %bold-title {
     .title {
-        text-transform: uppercase;
-        color: $text-base-even-lighter;
+      font-weight: bold;
+      color: $color-divider;
+    }
+  }
+
+  .head {
+    @extend %bold-title;
+    background: url("../images/arrow_head.jpg") no-repeat bottom center;
+    background-size: 11px 11px;
+    @media (max-width: $breakpoint-320) { display: none; }
+  }
+
+  .foot {
+    @extend %bold-title;
+    background: url("../images/arrow_foot.jpg") no-repeat top center;
+    background-size: 1px 6px;
+    padding-top: $space-lg;
+    color: $color-gray;
+    .school { line-height: 1.4; }
+    @media (max-width: $breakpoint-320) { display: none; }
+  }
+
+}
+
+.chapter-experience {
+  display: block;
+  text-align: center;
+  @media (min-width: $breakpoint-320+1) {
+    background: url("../images/arrow_body.jpg") repeat-y center;
+  }
+  padding-top: $space-sm;
+  padding-bottom: $space-sm;
+
+  @mixin adn-line($size) {
+    content: "";
+    background: lighten($color-divider, 5%);
+    display: inline-block;
+    height: 4px;
+    width: $size;
+    margin: 0 $space-sm;
+    position: relative;
+    bottom: -5px;
+    @include border-radius(4px);
+  }
+
+  @mixin side-project {
+    content: "SIDE PROJECT";
+    color: $color-blue;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: $space-xsm;
+  }
+
+  @mixin right($amount) {
+    .title {
+      position: relative;
+      text-align: left;
+      margin-left: 50%;
+      &:before { @include adn-line($amount); }
+      &.side:after { @include side-project() }
+      .content { display: inline-block }
+      .year { left: 0; }
+    }
+  }
+  @mixin left($amount) {
+    .title {
+      position: relative;
+      text-align: right;
+      margin-right: 50%;
+      &:after { @include adn-line($amount); }
+      &.side:before { @include side-project(); }
+      .content { display: inline-block; }
+      .year { right: 0; }
+    }
+  }
+
+  @media (min-width: $breakpoint-320+1) {
+    &:nth-child(10n+1) { @include right(8px); }
+    &:nth-child(10n+2) { @include right(55px); }
+    &:nth-child(10n+3) { @include right(76px); }
+    &:nth-child(10n+4) { @include right(55px); }
+    &:nth-child(10n+5) { @include right(8px); }
+    &:nth-child(10n+6) { @include left(8px); }
+    &:nth-child(10n+7) { @include left(55px); }
+    &:nth-child(10n+8) { @include left(76px); }
+    &:nth-child(10n+9) { @include left(55px); }
+    &:nth-child(10n+10) { @include left(8px); }
+  }
+
+  .title {
+
+    .content {
+      cursor: zoom-in;
+      position: relative;
     }
 
-    i.spaced {
-        width: 20px;
-        margin-right: $space-xsm;
-        text-align: right;
+    .year {
+      color: $color-gray;
+      font-size: 0.8em;
+      @media (min-width: $breakpoint-320+1){
+        position: absolute;
+        bottom: -18px;
+      }
     }
 
-    .copyright {
-        text-align: center;
-        color: $text-base-even-even-lighter;
+    @media (max-width: $breakpoint-320) {
+      font-size: 20px;
+      .name { text-decoration: underline; }
+    }
+  }
+
+  .card {
+    font-size: 17px;
+    line-height: 1.5;
+    color: $color-text-bright;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    height: 0;
+    min-height: 0;
+
+    .container {
+      border: 1px solid $color-divider;
+      position: relative;
+      background: white;
+      padding: $space-lg 0;
+      max-width: 580px;
+      @include border-radius(15px);
+
+      @media (max-width: $breakpoint-320) {
+        @include border-radius(0px);
+        border: none;
+        background: $color-light-background;
+      }
     }
 
-    @media (min-width: $screen-md) {
-        .column-left {
-            border-right: 1px solid $color-light-gray-darker-darker;
-        }
-        .column-right {
-            padding-left: $space-lg;
-        }
+    &.card-displayed {
+      display: block;
+      .container {
+        cursor: zoom-out;
+      }
     }
+
+    .card-icon {
+      padding-top: $space-sm;
+    }
+
+    .card-title {
+      padding-top: $space-md;
+      font-family: "Quicksand", serif;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .card-subtitle {
+      font-size: 0.8em;
+      color: $color-gray;
+      padding-bottom: $space-md;
+    }
+
+    .card-description {
+      text-align: left;
+      padding: 0 $space-xlg;
+
+      ul {
+        padding: $space-sm $space-lg;
+      }
+    }
+
+    .card-screenshots {
+      margin-bottom: $space-md;
+
+      img {
+        display: inline-block;
+        cursor: zoom-in;
+        border: 1px solid $color-divider;
+        margin: $space-xsm/2 $space-xsm/2;
+        @include border-radius(2px)
+      }
+    }
+  }
+
 }

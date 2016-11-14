@@ -1,35 +1,56 @@
 @mixin white-shadow {
-    $shadow: "";
-    @for $i from -2 to 3 {
-        @for $j from -2 to 3 {
-            $shadow: $shadow + $i + 'px ' + $j + 'px 0px #FFF';
-            @if $i != 2 or $j != 2 {
-                $shadow: $shadow + ", ";
-            }
-        }
+  $shadow: "";
+  @for $i from -2 to 3 {
+    @for $j from -2 to 3 {
+      $shadow: $shadow + $i + 'px ' + $j + 'px 0px #FFF';
+      @if $i != 2 or $j != 2 {
+        $shadow: $shadow + ", ";
+      }
     }
-    text-shadow: unquote($shadow);
+  }
+  text-shadow: unquote($shadow);
 }
 
 @mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
 }
 
 @mixin grayscale($saturation) {
-    -webkit-filter: grayscale($saturation);
-    -moz-filter: grayscale($saturation);
-    filter: grayscale($saturation);
+  -webkit-filter: grayscale($saturation);
+  -moz-filter: grayscale($saturation);
+  filter: grayscale($saturation);
 }
 
 @mixin noselect() {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin border-radius($radius) {
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
+}
+
+@mixin clear-before {
+  &:before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin clear-after {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
