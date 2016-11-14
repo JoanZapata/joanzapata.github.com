@@ -1,19 +1,19 @@
 angular
     .module('website', ['ngSanitize'])
-    .controller('JobsController', function ($scope) {
+    .controller('JobsController', ['$scope', function ($scope) {
 
         $scope.jobs = [
             {
                 name: "Memori",
                 side: true,
-                icon: "/images/memori.png",
+                icon: "images/memori.png",
                 date: "2016",
                 skills: ["IOS", "DESIGN"],
                 screenshots: ["memori_walkthrough1.jpg", "memori_walkthrough2.jpg", "memori_walkthrough3.jpg", "memori_walkthrough4.jpg"],
                 description: "Memori helps people stop forgetting what matters to them using gamification. Memori is my first iOS application. I designed, developed and released it in 10 days, after which I wrote an article about the technical and design challenges. You can find it <a href='http://blog.joanzapata.com/android-to-ios-in-10-days/' target='_blank'>here</a>." // TODO
             }, {
                 name: "Livetouch Apps",
-                icon: "/images/livetouch.png",
+                icon: "images/livetouch.png",
                 company: "JCDecaux, Paris",
                 date: "2015-2016",
                 screenshots: ["livetouch_launcher.jpg", "livetouch_twitter.jpg", "livetouch_nearby.jpg", "livetouch_rss.jpg"],
@@ -29,7 +29,7 @@ angular
             }, {
                 name: "ConnectCity",
                 company: "JCDecaux, Paris",
-                icon: "/images/connectcity.png",
+                icon: "images/connectcity.png",
                 date: "2015",
                 skills: ["DESIGN", "BACKEND", "WEB"],
                 screenshots: ["connectcity_1.jpg", "connectcity_2.jpg"],
@@ -37,7 +37,7 @@ angular
             }, {
                 name: "Guillotine",
                 company: "JCDecaux, Paris",
-                icon: "/images/guillotine.png",
+                icon: "images/guillotine.png",
                 date: "2015",
                 skills: ["ANDROID", "BACKEND", "WEB"],
                 screenshots: ["guillotine.jpg"],
@@ -45,7 +45,7 @@ angular
             }, {
                 name: "Midpic",
                 company: "Redmill, Paris",
-                icon: "/images/midpic.png",
+                icon: "images/midpic.png",
                 date: "2014",
                 skills: ["ANDROID"],
                 screenshots: ["midpic1.jpg", "midpic2.jpg", "midpic3.jpg", "midpic4.jpg"],
@@ -53,7 +53,7 @@ angular
             }, {
                 name: "S02",
                 side: true,
-                icon: "/images/S02.png",
+                icon: "images/s02.png",
                 date: "2014",
                 skills: ["ANDROID", "DESIGN", "BACKEND"],
                 screenshots: ["S02_1.jpg", "S02_2.jpg", "S02_3.jpg"],
@@ -61,14 +61,14 @@ angular
             }, {
                 name: "Tracker Prototype",
                 company: "Avalanche Tech Group, Australia",
-                icon: "/images/avalanche.png",
+                icon: "images/avalanche.png",
                 date: "2014",
                 skills: ["ANDROID"],
                 description: "I developed a proof of concept for an Android app that would track suspicious usages of the camera or microphone and alert the user. The challenge was to bypass the Android platform restrictions to track the camera, microphone and GPS usage from other apps. I used the <a href='http://www.groovy-lang.org/' target='blank'>Groovy</a> language on this prototype instead of Java, which was much more readable for all IO operations."
             }, {
                 name: "Candyshop",
                 company: "Redmill, Paris",
-                icon: "/images/candyshop.png",
+                icon: "images/candyshop.png",
                 date: "2014",
                 skills: ["ANDROID"],
                 screenshots: ["candyshop1.jpg", "candyshop2.jpg", "candyshop3.jpg"],
@@ -76,7 +76,7 @@ angular
             }, {
                 name: "Design My App",
                 company: "eBusinessInformation, Paris",
-                icon: "/images/dma.png",
+                icon: "images/dma.png",
                 date: "2014",
                 skills: ["ANDROID", "DESIGN", "BACKEND", "WEB"],
                 screenshots: ["dma_1.jpg", "dma_2.jpg", "dma_3.jpg"],
@@ -84,7 +84,7 @@ angular
             }, {
                 name: "Memory Map",
                 side: true,
-                icon: "/images/memorymap.png",
+                icon: "images/memorymap.png",
                 date: "2013 - Now",
                 skills: ["ANDROID", "DESIGN"],
                 screenshots: ["memorymap1.jpg", "memorymap2.jpg", "memorymap3.jpg"],
@@ -92,14 +92,14 @@ angular
             }, {
                 name: "JCDecaux Developer",
                 company: "JCDecaux, Paris",
-                icon: "/images/jcdecauxdev.png",
+                icon: "images/jcdecauxdev.png",
                 date: "2013",
                 skills: ["BACKEND", "WEB", "DESIGN"],
                 screenshots: ["jcdecaux_developer.jpg"],
                 description: "All of JCDecaux bike-sharing data made available to all developers through a dedicated website and API. I designed and developed the website with AngularJS and a Java/Spring backend. I managed user registration, API key generation, the interactive documentation for developers and an administration interface."
             }, {
                 name: "VuzZz",
-                icon: "/images/vuzzz.png",
+                icon: "images/vuzzz.png",
                 date: "2012",
                 skills: ["ANDROID", "BACKEND", "DESIGN"],
                 screenshots: ["vuzzz_1.png", "vuzzz_2.png", "vuzzz_3.png"],
@@ -107,22 +107,22 @@ angular
             }, {
                 name: "Livetouch Platform",
                 company: "JCDecaux, Paris",
-                icon: "/images/livetouch.png",
+                icon: "images/livetouch.png",
                 date: "2011 - 2013",
                 skills: ["BACKEND", "DESIGN", "WEB"],
                 screenshots: ["livetouch_1.jpg", "livetouch_2.jpg"],
                 description: "Livetouch is a set of 42\" Android-powered screens integrated into urban furnitures like kiosks and bus shelters. In the context of expanding the platform to a lot of new cities, I designed and developed multiple applications to quickly adapt to each cities and provide useful information."
-                    + " I designed, developed and deployed in production a distributed system with many actors:"
-                    + "<ul><li>A real-time administration interface written with GWT</li>"
-                    + "<li>A distributed server with webservices based on Spring</li>"
-                    + "<li>An Android service running as root on all devices</li>"
-                    + "<li>MQTT brokers for real-time communications</li>"
-                    + "<li>Cassandra databases for usage stats and logs</li>"
-                    + "<li>A MySQL database for relational data</li></ul>"
+                + " I designed, developed and deployed in production a distributed system with many actors:"
+                + "<ul><li>A real-time administration interface written with GWT</li>"
+                + "<li>A distributed server with webservices based on Spring</li>"
+                + "<li>An Android service running as root on all devices</li>"
+                + "<li>MQTT brokers for real-time communications</li>"
+                + "<li>Cassandra databases for usage stats and logs</li>"
+                + "<li>A MySQL database for relational data</li></ul>"
             }, {
                 name: "Capico",
                 company: "eBusinessInformation, Paris",
-                icon: "/images/capico.png",
+                icon: "images/capico.png",
                 date: "2011",
                 skills: ["ANDROID", "BACKEND"],
                 description: "A digital workbook for a class of student, with lessons and exercises, and real-time feedback for the teacher. I developed the Android application from scratch with another developer, as two others developed the iOS app. Also worked on the server side, used TDD, written unit and functional tests on both server and Android sides."
@@ -134,19 +134,16 @@ angular
         var ANIMATION_CARD_TOP = -32;
 
 
-        $scope.openScreenshot = function(screenshot) {
+        $scope.openScreenshot = function (screenshot) {
             window.open('images/screenshots/' + screenshot);
         };
 
         // Toggle visibility of a card
         $scope.togglecard = function (cardId) {
-            console.log("Toggle card "+cardId);
 
             // Get the card
             var cardElem = $("#card-" + cardId);
             var titleElem = $("#title-" + cardId);
-
-
 
             // Determine if animation should go left/right
             var i = 0;
@@ -172,10 +169,12 @@ angular
                 // Animate to nominal height, and restore auto height after animation
                 // to deal with browser size changes.
                 cardElem.css({top: ANIMATION_CARD_TOP});
-                cardElem.transition({height: containerHeight, top: 0}, {duration: ANIMATION_DURATION,
+                cardElem.transition({height: containerHeight, top: 0}, {
+                    duration: ANIMATION_DURATION,
                     complete: function () {
                         cardElem.css({height: "auto"});
-                    }});
+                    }
+                });
 
                 // Set child original position before animation
                 var childOffset = isElementRight
@@ -216,4 +215,4 @@ angular
             }
 
         }
-    });
+    }]);

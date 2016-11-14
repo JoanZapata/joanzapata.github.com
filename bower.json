@@ -5,7 +5,6 @@
     "sass-bootstrap": "3.0.2",
     "jquery": "2.1.4",
     "font-awesome": "4.3.0",
-    "slick-carousel": "1.5.5",
     "jquery.transit": "0.9.12",
     "angular": "angularjs#^1.5.8",
     "angular-sanitize": "^1.5.8"

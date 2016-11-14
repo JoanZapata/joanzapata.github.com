@@ -149,24 +149,6 @@ module.exports = function (grunt) {
                 ignorePath: '<%= yeoman.app %>/'
             }
         },
-        // not enabled since usemin task does concat and uglify
-        // check index.html to edit your build targets
-        // enable this task if you prefer defining your build targets here
-        /*uglify: {
-         dist: {}
-         },*/
-        rev: {
-            dist: {
-                files: {
-                    src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                        '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
-                    ]
-                }
-            }
-        },
         useminPrepare: {
             options: {
                 dest: '<%= yeoman.dist %>'
@@ -258,7 +240,8 @@ module.exports = function (grunt) {
                             'images/{,*/}*.{webp,gif}',
                             'styles/fonts/{,*/}*.*',
                             'bower_components/sass-bootstrap/fonts/*.*',
-                            'bower_components/font-awesome/fonts/*.*'
+                            'bower_components/font-awesome/fonts/*.*',
+                            'CNAME'
                         ]
                     }
                 ]
@@ -309,7 +292,6 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
-        'rev',
         'usemin'
     ]);
 

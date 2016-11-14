@@ -1,7 +1,5 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'sass-bootstrap/lib/bootstrap';
-@import 'slick-carousel/slick/slick';
-
 $fa-font-path: "/bower_components/font-awesome/fonts/";
 @import 'font-awesome/scss/font-awesome';
 
@@ -34,6 +32,10 @@ a {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+html {
+  min-width: 320px;
 }
 
 body {
@@ -107,10 +109,14 @@ body {
   @extend %chapter-large;
 
   .container {
+    width: 100%;
+    margin: 0;
+
     .header-image {
       display: inline-block;
       width: 880px;
       height: 582px;
+      margin: 0 auto;
       background: url(../images/header880.jpg);
       background-size: cover;
 
@@ -121,10 +127,11 @@ body {
         background-size: cover;
       }
       @media (max-width: $breakpoint-320) {
-        width: 320px;
+        width: 100%;
+        max-width: 320px;
         height: 296px;
-        background: url(../images/header320.jpg);
-        background-size: cover;
+        background: url(../images/header320.jpg) no-repeat center;
+        background-size: 100%;
       }
     }
   }
@@ -388,7 +395,7 @@ body {
     .year {
       color: $color-gray;
       font-size: 0.8em;
-      @media (min-width: $breakpoint-320+1){
+      @media (min-width: $breakpoint-320+1) {
         position: absolute;
         bottom: -18px;
       }
