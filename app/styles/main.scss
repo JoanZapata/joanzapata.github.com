@@ -209,7 +209,7 @@ body {
         margin-bottom: $space-md;
         display: inline-block;
       }
-      $gray-dot: lighten($color-divider, 10%);
+      $gray-dot: lighten($color-divider, 5%);
       .smaller { font-weight: normal; }
       .off { color: $gray-dot; }
       .ios { color: #3CD2D7; }
