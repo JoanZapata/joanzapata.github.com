@@ -27,6 +27,14 @@ angular
                 + "<li><b>An indoor map prototype app</b> to show directions inside malls</li></ul>",
                 skills: ["ANDROID", "DESIGN"]
             }, {
+                name: "Créabri",
+                icon: "images/creabri.png",
+                company: "JCDecaux, Paris",
+                date: "2015",
+                screenshots: ["creabri_1.jpg"],
+                description: "Créabri is a tablet app to help JCDecaux agents collect in-depth details about bus shelters on the field and provide the city with the most accurate answer for a renewal contract. I designed and developed it from scratch. Technically, the biggest challenge of this app was its offline capabilities and reliable synchronization. It's mostly based on RxJava and a reactive storage being the single source of truth.",
+                skills: ["ANDROID", "DESIGN"]
+            }, {
                 name: "ConnectCity",
                 company: "JCDecaux, Paris",
                 icon: "images/connectcity.png",
