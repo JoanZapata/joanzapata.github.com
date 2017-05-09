@@ -126,13 +126,18 @@
     <div class="head">&nbsp;</div>
 
     <div class="chapter-experience" ng-repeat="job in jobs track by $index">
-        <div class="title" ng-class="{'side': job.side}" id="title-{{$index}}" ng-click="togglecard($index)">
+        <div class="title" id="title-{{$index}}" ng-click="togglecard($index)">
             <div class="content">
                 <div class="side">
                     <div class="name">{{job.name}}</div>
-                    <div class="year">{{job.date}}</div>
+                    <div class="skills">
+                        <span ng-repeat="skill in job.skills" class="{{skill | lowercase}}">
+                            {{skill}}
+                        </span>
+                    </div>
                 </div>
             </div>
+            <div class="year">{{job.date}}</div>
         </div>
 
         <div class="card" id="card-{{$index}}">
