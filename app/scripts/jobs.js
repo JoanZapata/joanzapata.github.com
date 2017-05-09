@@ -10,14 +10,17 @@ angular
                 date: "2017",
                 skills: ["IOS"],
                 screenshots: [],
-                description: "I worked on two distinct subjects on the Hertz 24/7 iOS app:"
-                + "<ul><li><b>In-app vehicle condition</b> so that long-time leasing customers don't have to come back every month to renew their contract.</li>"
-                + "<li><b>Prototype for opening the car using BLE</b>, I worked on the protocol specifications and implemented a fully-tested library ready to be deployed in the main app as soon as the infrastructure is ready (late 2017).</li></ul>"
-                + "Since I was ahead of the backend and hardware teams on those two subjects, I chose to spent some time reducing the feedback loop and increasing quality in some ways:"
-                + "<ul><li><b>Continuous integration and delivery</b>, the app was seven years old and there was no continuous integration and no clear branching model. The release process was tedious and releases were rare. I mainly used <a href='https://jenkins.io/' target='_blank'>Jenkins</a> and <a href='https://fastlane.tools/' target='_blank'>Fastlane</a> to improve that. I started by introducing gitflow to the team, and setup Jenkins to automatically build, test and deploy the <b>develop</b> branch to <a href='http://try.crashlytics.com/beta/' target='_blank'>Crashlytics Beta</a>. It made all developments directly accessible to the QA as soon as they're finished. Then, I made the CI build <b>release/*</b> branches and upload binaries to iTunesConnect, along with metadata, versions, and screenshots.</li>"
-                + "<li><b>AppStore screenshots automation</b>, since the app has four screenshots, available in seven languages, in all screen ratios, 84 screenshots were manually taken at each major release, which took a day. I reduced it to a single command using UI tests and <a href='https://github.com/fastlane/fastlane/tree/master/snapshot' target='_blank'>Snapshot</a>.</li>"
-                + "<li><b>Refactoring</b>, after seven years, many developers, two programming languages, no tests and a big mutable singleton as an architecture <span class='small gray'>(sigh)</span>, the app had become hard to evolve and maintain. I reduced its complexity by extracting services and utils into a different framework, breaking dependency cycles with the singleton. Then I migrated the complex legacy registration process from ObjC to Swift, carefully testing it, and removing its coupling with the singleton.</li>"
+                description: "I worked on two distinct subjects on the Hertz 24/7 iOS app."
+                + "<ul><li><b>In-app vehicle condition</b></li>"
+                + "<li><b>Remote car opening using BLE</b></li></ul>"
+                + "As a side project, I chose to raise the overall maintainability of the app. It was a seven years old app, with multiple targets — <a href='https://itunes.apple.com/au/app/flexicar/id963664904?mt=8' target='_blank'>Flexicar</a> is built from the same source code —, no continuous integration, no clear branching model, no test, and a singleton based architecture. There was a lot to do so I focused myself on four main aspects."
+                + "<ul><li><b>Continuous integration</b> using <a href='https://jenkins.io/' target='_blank'>Jenkins</a> and <a href='https://fastlane.tools/' target='_blank'>Fastlane</a>"
+                + "<li><b>Continuous delivery</b> to <a href='http://try.crashlytics.com/beta/' target='_blank'>Beta</a> and the AppStore</li>"
+                + "<li><b>AppStore screenshots generation</b> using UI tests and <a href='https://github.com/fastlane/fastlane/tree/master/snapshot' target='_blank'>Snapshot</a></li>"
+                + "<li><b>Refactoring</b> out of a singleton based architecture</li>"
+                + "<li><b>Tests</b> of all business rules in a separate framework with no dependency</li>"
                 + "</ul>"
+                + "I learned a lot during this experience. Enabling in-app vehicle condition was a UX challenge, and the BLE communication library was a really good case for TDD/BDD. Eliminating the many obstacles in the beta/release process was really fulfilling. Working with legacy code, although frustrating at first, sharpened my skills at separating concerns, and taught me once again the importance of tests."
             }, {
                 name: "Memori",
                 side: true,
