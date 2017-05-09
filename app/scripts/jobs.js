@@ -4,13 +4,28 @@ angular
 
         $scope.jobs = [
             {
+                name: "Hertz 24/7",
+                side: false,
+                icon: "images/h247.png",
+                date: "2017",
+                skills: ["IOS"],
+                screenshots: [],
+                description: "I worked on two distinct subjects on the Hertz 24/7 iOS app:"
+                + "<ul><li><b>In-app vehicle condition</b> so that long-time leasing customers don't have to come back every month to renew their contract.</li>"
+                + "<li><b>Prototype for opening the car using BLE</b>, I worked on the protocol specifications and implemented a fully-tested library ready to be deployed in the main app as soon as the infrastructure is ready (late 2017).</li></ul>"
+                + "Since I was ahead of the backend and hardware teams on those two subjects, I chose to spent some time reducing the feedback loop and increasing quality in some ways:"
+                + "<ul><li><b>Continuous integration and delivery</b>, the app was seven years old and there was no continuous integration and no clear branching model. The release process was tedious and releases were rare. I mainly used <a href='https://jenkins.io/' target='_blank'>Jenkins</a> and <a href='https://fastlane.tools/' target='_blank'>Fastlane</a> to improve that. I started by introducing gitflow to the team, and setup Jenkins to automatically build, test and deploy the <b>develop</b> branch to <a href='http://try.crashlytics.com/beta/' target='_blank'>Crashlytics Beta</a>. It made all developments directly accessible to the QA as soon as they're finished. Then, I made the CI build <b>release/*</b> branches and upload binaries to iTunesConnect, along with metadata, versions, and screenshots.</li>"
+                + "<li><b>AppStore screenshots automation</b>, since the app has four screenshots, available in seven languages, in all screen ratios, 84 screenshots were manually taken at each major release, which took a day. I reduced it to a single command using UI tests and <a href='https://github.com/fastlane/fastlane/tree/master/snapshot' target='_blank'>Snapshot</a>.</li>"
+                + "<li><b>Refactoring</b>, after seven years, many developers, two programming languages, no tests and a big mutable singleton as an architecture <span class='small gray'>(sigh)</span>, the app had become hard to evolve and maintain. I reduced its complexity by extracting services and utils into a different framework, breaking dependency cycles with the singleton. Then I migrated the complex legacy registration process from ObjC to Swift, carefully testing it, and removing its coupling with the singleton.</li>"
+                + "</ul>"
+            }, {
                 name: "Memori",
                 side: true,
                 icon: "images/memori.png",
                 date: "2016",
                 skills: ["IOS", "DESIGN"],
                 screenshots: ["memori_walkthrough1.jpg", "memori_walkthrough2.jpg", "memori_walkthrough3.jpg", "memori_walkthrough4.jpg"],
-                description: "Memori helps people stop forgetting what matters to them using gamification. Memori is my first iOS application. I designed, developed and released it in 10 days, after which I wrote an article about the technical and design challenges. You can find it <a href='http://blog.joanzapata.com/android-to-ios-in-10-days/' target='_blank'>here</a>." // TODO
+                description: "Memori helps people stop forgetting what matters to them using gamification. Memori is my first iOS app, you can read more about my transition from Android to iOS <a href='http://blog.joanzapata.com/android-to-ios-in-10-days/' target='_blank'>here</a>."
             }, {
                 name: "Livetouch Apps",
                 icon: "images/livetouch.png",
@@ -32,7 +47,7 @@ angular
                 company: "JCDecaux, Paris",
                 date: "2015",
                 screenshots: ["creabri_1.jpg"],
-                description: "Créabri is a tablet app to help JCDecaux agents collect in-depth details about bus shelters on the field and provide the city with the most accurate answer for a renewal contract. I designed and developed it from scratch. Technically, the biggest challenge of this app was its offline capabilities and reliable synchronization. It's mostly based on RxJava and a reactive storage being the single source of truth.",
+                description: "Créabri is a tablet app to help JCDecaux agents collect in-depth details about bus shelters on the field and provide the city with the most accurate answer for a renewal contract. I designed and developed it from scratch. Technically, the biggest challenge of this app was its offline capabilities and reliable synchronization. It's mostly based on RxJava and a reactive storage.",
                 skills: ["ANDROID", "DESIGN"]
             }, {
                 name: "ConnectCity",
@@ -49,7 +64,7 @@ angular
                 date: "2015",
                 skills: ["ANDROID", "BACKEND", "WEB"],
                 screenshots: ["guillotine.jpg"],
-                description: "Guillotine is an automated testing platform for Android applications. It manages multiple connected devices through ADB, and tests APKs by installing them on the device and monitoring RAM, CPU, leaks, crashes, etc.. while smartly simulating touch events or reproducing a pre-recorded touch scenario. Technically, this project was a good fit for me, it required Android skills to know how and what to test on APKs, backend skills to properly architecture the server side and web skills to generate an appealing administration board with many graphs and reports."
+                description: "Guillotine is an automated testing platform for Android applications. It manages multiple connected devices through ADB, and tests APKs by installing them on the device and monitoring RAM, CPU, leaks, crashes, etc.. while smartly simulating touch events or reproducing a pre-recorded touch scenarios. Technically, this project was a good fit for me, it required Android skills to know how and what to test on APKs, backend skills to properly architecture the server side and web skills to generate an appealing administration board with many graphs and reports."
             }, {
                 name: "Midpic",
                 company: "Redmill, Paris",
@@ -65,7 +80,7 @@ angular
                 date: "2014",
                 skills: ["ANDROID", "DESIGN", "BACKEND"],
                 screenshots: ["S02_1.jpg", "S02_2.jpg", "S02_3.jpg"],
-                description: "S02 helps keeping track of the progress in multiple TV shows. I designed and developed this minimalist app with subtle animations, backed by a cloud backend made with <a href='https://parse.com/' target='_blank'>Parse</a>."
+                description: "S02 helps keeping track of the progress in multiple TV shows. I designed and developed this minimalist app with subtle animations, backed by a cloud backend made with Parse."
             }, {
                 name: "Tracker Prototype",
                 company: "Avalanche Tech Group, Australia",
