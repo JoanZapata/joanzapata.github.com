@@ -13,7 +13,7 @@ angular
                 description: "I worked on two distinct subjects on the Hertz 24/7 iOS app."
                 + "<ul><li><b>In-app vehicle condition</b></li>"
                 + "<li><b>Remote car opening using BLE</b></li></ul>"
-                + "As a side project, I chose to raise the overall maintainability of the app. It was a seven years old app, with multiple targets — <a href='https://itunes.apple.com/au/app/flexicar/id963664904?mt=8' target='_blank'>Flexicar</a> is built from the same source code —, no continuous integration, no clear branching model, no test, and a singleton based architecture. There was a lot to do so I focused myself on four main aspects."
+                + "As a side project, I chose to raise the overall maintainability of the app. It was a seven years old app, with multiple targets — <a href='https://itunes.apple.com/au/app/flexicar/id963664904?mt=8' target='_blank'>Flexicar</a> is built from the same source code —, no continuous integration, no clear branching model, no test, and a singleton based architecture. There was a lot to do so I focused myself on five main aspects."
                 + "<ul><li><b>Continuous integration</b> using <a href='https://jenkins.io/' target='_blank'>Jenkins</a> and <a href='https://fastlane.tools/' target='_blank'>Fastlane</a>"
                 + "<li><b>Continuous delivery</b> to <a href='http://try.crashlytics.com/beta/' target='_blank'>Beta</a> and the AppStore</li>"
                 + "<li><b>AppStore screenshots generation</b> using UI tests and <a href='https://github.com/fastlane/fastlane/tree/master/snapshot' target='_blank'>Snapshot</a></li>"
