@@ -20,7 +20,7 @@ angular
                 + "<li><b>Refactoring</b> out of a singleton based architecture</li>"
                 + "<li><b>Tests</b> of all business rules in a separate framework with no dependency</li>"
                 + "</ul>"
-                + "I learned a lot during this experience. Enabling in-app vehicle condition was a UX challenge, and the BLE communication library was a really good case for TDD/BDD. Eliminating the many obstacles in the beta/release process was really fulfilling. Working with legacy code, although frustrating at first, sharpened my skills at separating concerns, and taught me once again the importance of tests."
+                + "I learned a lot during this experience. Enabling in-app vehicle condition was a UX challenge, and the BLE communication library was a really good case for TDD/BDD. Eliminating the many obstacles in the beta/release process was really fulfilling. Working with legacy code and its large technical debt can be a frustrating experience, but it sharpened my skills at separating concerns, and taught me once again the importance of tests."
             }, {
                 name: "Memori",
                 side: true,
@@ -198,7 +198,7 @@ angular
                         cardElem.css({height: "auto"});
                     }
                 });
-                
+
                 // Set child original position before animation
                 var childOffset = isElementRight
                     ? {left: ANIMATION_SIDE, opacity: 0}
