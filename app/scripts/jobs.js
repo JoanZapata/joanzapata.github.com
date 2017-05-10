@@ -198,8 +198,7 @@ angular
                         cardElem.css({height: "auto"});
                     }
                 });
-
-                console.log(isElementRight);
+                
                 // Set child original position before animation
                 var childOffset = isElementRight
                     ? {left: ANIMATION_SIDE, opacity: 0}
