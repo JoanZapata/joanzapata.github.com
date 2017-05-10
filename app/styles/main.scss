@@ -341,7 +341,7 @@ body {
     width: $size;
     margin: 0 $space-sm;
     position: relative;
-    bottom: 12px;
+    bottom: 15px;
     @include border-radius(4px);
   }
 
@@ -416,7 +416,7 @@ body {
       @media (min-width: $breakpoint-320+1) {
         margin: 0 $space-sm;
         position: absolute;
-        bottom: 12px;
+        bottom: 15px;
       }
     }
 
@@ -494,11 +494,14 @@ body {
 
     .card-screenshots {
       margin-bottom: $space-md;
+      background: $color-light-background;
 
       img {
         display: inline-block;
         cursor: zoom-in;
-        border: 1px solid $color-divider;
+        max-width: 200px;
+        max-height: 200px;
+        #border: 1px solid $color-text;
         margin: $space-xsm/2 $space-xsm/2;
         @include border-radius(2px)
       }

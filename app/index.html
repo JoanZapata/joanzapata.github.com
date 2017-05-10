@@ -11,9 +11,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Joan Zapata</title>
-    <meta name="description" content="Online CV of Joan Zapata, freelance software engineer in Paris, France.">
+    <meta name="description" content="Freelance Software Engineer">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -21,8 +20,7 @@
 <body ng-app="website">
 <!--[if lt IE 10]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your
-    experience.</p>
+    your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- INTRO -->
@@ -54,7 +52,7 @@
                 <div class="skill-container">
                     <div class="skill">
                         <div class="ios">iOS <span class="bullet">• • • •<span class="off"> •</span></span>
-                            <img src="images/increase.jpg" width="12px" class="increase bullet"/>
+                            <img src="images/increase.jpg" width="11px" class="increase bullet"/>
                         </div>
                         <div class="smaller gray">Swift, Rx, Cocoapods, Fastlane</div>
                     </div>
@@ -157,7 +155,6 @@
                 <div class="card-screenshots" ng-show="job.screenshots">
                     <img ng-repeat="screenshot in job.screenshots"
                          ng-src="images/screenshots/{{screenshot}}"
-                         height="200px"
                          ng-click="openScreenshot(screenshot); $event.stopPropagation();"/>
                 </div>
                 <p class="card-description" ng-bind-html="job.description">

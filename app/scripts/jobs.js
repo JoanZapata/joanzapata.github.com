@@ -7,13 +7,13 @@ angular
                 name: "Hertz 24/7",
                 side: false,
                 icon: "images/h247.png",
-                date: "2017",
+                date: "2016-2017",
                 skills: ["iOS"],
-                screenshots: [],
+                screenshots: ["h247_0.jpg", "h247_1.jpg", "h247_2.jpg", "h247_3.jpg"],
                 description: "I worked on two distinct subjects on the Hertz 24/7 iOS app."
                 + "<ul><li><b>In-app vehicle condition</b></li>"
                 + "<li><b>Remote car opening using BLE</b></li></ul>"
-                + "As a side project, I chose to raise the overall maintainability of the app. It was a seven years old app, with multiple targets — <a href='https://itunes.apple.com/au/app/flexicar/id963664904?mt=8' target='_blank'>Flexicar</a> is built from the same source code —, no continuous integration, no clear branching model, no test, and a singleton based architecture. There was a lot to do so I focused myself on five main aspects."
+                + "Aside from these topics, I chose to raise the overall maintainability of the app. It was a seven years old app, with multiple targets — <a href='https://itunes.apple.com/au/app/flexicar/id963664904?mt=8' target='_blank'>Flexicar</a> is built from the same source code —, no continuous integration, no clear branching model, no test, and a singleton based architecture. There was a lot to do so I focused myself on five main aspects."
                 + "<ul><li><b>Continuous integration</b> using <a href='https://jenkins.io/' target='_blank'>Jenkins</a> and <a href='https://fastlane.tools/' target='_blank'>Fastlane</a>"
                 + "<li><b>Continuous delivery</b> to <a href='http://try.crashlytics.com/beta/' target='_blank'>Beta</a> and the AppStore</li>"
                 + "<li><b>AppStore screenshots generation</b> using UI tests and <a href='https://github.com/fastlane/fastlane/tree/master/snapshot' target='_blank'>Snapshot</a></li>"
@@ -172,10 +172,7 @@ angular
             var titleElem = $("#title-" + cardId);
 
             // Determine if animation should go left/right
-            var i = 0;
-            var child = cardElem;
-            while ((child = child.previousSibling) != null) i++;
-            var isElementRight = i % 10 < 5;
+            var isElementRight = titleElem.css("text-align") === "left";
 
             // Use the immediate child as a height reference
             var child = cardElem.children().first();
@@ -202,6 +199,7 @@ angular
                     }
                 });
 
+                console.log(isElementRight);
                 // Set child original position before animation
                 var childOffset = isElementRight
                     ? {left: ANIMATION_SIDE, opacity: 0}
