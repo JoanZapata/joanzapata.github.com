@@ -414,6 +414,7 @@ body {
       color: $color-gray;
       font-size: 0.8em;
       @media (min-width: $breakpoint-320+1) {
+        width: 80%;
         margin: 0 $space-sm;
         position: absolute;
         bottom: 15px;
