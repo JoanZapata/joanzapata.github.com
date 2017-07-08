@@ -13,6 +13,7 @@
     <title>Joan Zapata</title>
     <meta name="description" content="Freelance Software Engineer">
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700" rel="stylesheet">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -26,6 +27,13 @@
 <!-- INTRO -->
 <div class="chapter-intro">
     <div class="container">
+        <div class="title">I’m Joan</div>
+        <div class="subtitle">SOFTWARE ENGINEER AT <span class="trustbk">TRUST<span class="half-baked">BK</span></span></div>
+        <div class="description">
+            We are building a new bank for small and medium businesses,<br class="hidden-xs"/>
+            centered around humans, using top-notch<br class="hidden-xs"/>
+            tools and technology.
+        </div>
         <div class="header-image"></div>
     </div>
 </div>
@@ -40,7 +48,7 @@
             <div class="col-md-6 left">
                 <div class="title">Skills</div>
                 <div class="text">
-                    I'm a passionate coder who strives to write clean, tested, high-quality code. I'm also a
+                    I’m a passionate coder who strives to write clean, tested, high-quality code. I’m also a
                     hobbyist designer who seeks pixel-perfect UI and seamless UX. I strongly believe in user-oriented
                     products and <a href="http://theleanstartup.com/principles" target="_blank"><b>fast feedback
                     loops</b></a>.
@@ -50,31 +58,28 @@
             <div class="col-md-5 right">
                 <div class="skill-container">
                     <div class="skill">
-                        <div class="ios">iOS <span class="bullet">• • • •<span class="off"> •</span></span>
-                            <img src="images/increase.jpg" width="11px" class="increase bullet"/>
-                        </div>
+                        <div class="backend">Backend <span class="bullet">• • • • <span class="off">•</span></span></div>
+                        <div class="smaller gray">Elixir, Java, Scala</div>
+                    </div>
+                    <br/>
+                    <div class="skill">
+                        <div class="web">Web <span class="bullet">• • • • <span class="off">•</span></span></div>
+                        <div class="smaller gray">React, AngularJS, SASS</div>
+                    </div>
+                    <br/>
+                    <div class="skill">
+                        <div class="ios">iOS <span class="bullet">• • • •<span class="off"> •</span></span></div>
                         <div class="smaller gray">Swift, Rx, Cocoapods, Fastlane</div>
+                    </div>
+                    <br/>
+                    <div class="skill">
+                        <div class="android">Android <span class="bullet">• • • • •</span></div>
+                        <div class="smaller gray">Kotlin, Rx, Dagger, Retrofit</div>
                     </div>
                     <br/>
                     <div class="skill">
                         <div class="design">Design <span class="bullet">• • • <span class="off">• •</span></span></div>
                         <div class="smaller gray">Sketch, Photoshop</div>
-                    </div>
-                    <br/>
-                    <div class="skill">
-                        <div class="android">Android <span class="bullet">• • • • •</span></div>
-                        <div class="smaller gray">Kotlin, RxJava, Dagger, Retrofit</div>
-                    </div>
-                    <br/>
-                    <div class="skill">
-                        <div class="web">Web <span class="bullet">• • • • <span class="off">•</span></span></div>
-                        <div class="smaller gray">Grunt/Gulp, Bower, AngularJS, SASS</div>
-                    </div>
-                    <br/>
-                    <div class="skill">
-                        <div class="backend">Backend <span class="bullet">• • • • <span class="off">•</span></span>
-                        </div>
-                        <div class="smaller gray">Java, Scala, Spring, Hibernate, AWS</div>
                     </div>
                 </div>
             </div>
@@ -92,7 +97,7 @@
         <br/>
         <div class="text">
             15 years ago I started crafting community websites as a kid. I now have an engineering degree and
-            6+ years of work experience. Here are some of the projects I've been working on.
+            6+ years of work experience. Here are some of the projects I’ve been working on.
         </div>
     </div>
 </div>
@@ -230,6 +235,14 @@
 
                 <div class="subheader">Last read books</div>
 
+                <a href="https://www.amazon.com/Elixir-Action-Sa%C5%A1a-Juri-cacute/dp/161729201X/ref=sr_1_1"
+                   target="_blank">Elixir in Action</a>
+                <span class="small gray">SAŠA JURIĆ</span><br/>
+
+                <a href="https://www.amazon.com/Programming-Elixir-1-3-Functional-Concurrent/dp/168050200X/ref=sr_1_1/147-9955428-9260962"
+                   target="_blank">Programming Elixir 1.3</a>
+                <span class="small gray">DAVE THOMAS</span><br/>
+
                 <a href="https://www.amazon.fr/RxSwift-Reactive-Programming-raywenderlich-com-Team/dp/1942878346"
                    target="_blank">RxSwift</a>
                 <span class="small gray">PILLET, BONTOGNALI, TODOROV, GARDNER</span><br/>
@@ -250,35 +263,37 @@
                    target="_blank">Clean Code</a>
                 <span class="small gray">ROBERT C. MARTIN</span><br/>
 
-                <a href="https://www.amazon.fr/iOS-Programming-Nerd-Ranch-Guide/dp/0134390733" target="_blank">iOS
-                    Programming</a>
-                <span class="small gray">THE BIG NERD RANCH</span><br/>
-                <a href="http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898/ref=sr_1_1?ie=UTF8&qid=1402735953&sr=8-1&keywords=the+lean+startup"
-                   target="_blank">
-                    The Lean Startup</a> <span class="small gray">ERIC RIES</span><br/>
+                <a ng-click="showMoreBooks=true" ng-show="!showMoreBooks">…</a>
+                <div ng-show="showMoreBooks">
 
-                <a href="http://www.manning.com/muschko/" target="_blank">Gradle In Action</a> <span
-                    class="small gray">BENJAMIN MUSCHKO</span><br/>
+                    <a href="https://www.amazon.fr/iOS-Programming-Nerd-Ranch-Guide/dp/0134390733" target="_blank">iOS
+                        Programming</a>
+                    <span class="small gray">THE BIG NERD RANCH</span><br/>
+                    <a href="http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898/ref=sr_1_1?ie=UTF8&qid=1402735953&sr=8-1&keywords=the+lean+startup"
+                       target="_blank">
+                        The Lean Startup</a> <span class="small gray">ERIC RIES</span><br/>
 
-                <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683"
-                   target="_blank">Effective Java 2</a>
-                <span class="small gray">JOSHUA BLOSH</span><br/>
+                    <a href="http://www.manning.com/muschko/" target="_blank">Gradle In Action</a> <span
+                        class="small gray">BENJAMIN MUSCHKO</span><br/>
 
-                <a href="http://shop.oreilly.com/product/9780596007126.do" target="_blank">Head First Design
-                    Patterns</a>
-                <span class="small gray">FREEMAN, ROBSON, BATES, SIERRA</span><br/>
+                    <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683"
+                       target="_blank">Effective Java 2</a>
+                    <span class="small gray">JOSHUA BLOSH</span><br/>
 
-                <a href="https://www.amazon.fr/Android-Programming-Nerd-Ranch-Guide/dp/0134171454"
-                   target="_blank">Android
-                    Programming</a>
-                <span class="small gray">THE BIG NERD RANCH</span>
+                    <a href="http://shop.oreilly.com/product/9780596007126.do" target="_blank">Head First Design
+                        Patterns</a>
+                    <span class="small gray">FREEMAN, ROBSON, BATES, SIERRA</span><br/>
 
+                    <a href="https://www.amazon.fr/Android-Programming-Nerd-Ranch-Guide/dp/0134171454"
+                       target="_blank">Android
+                        Programming</a>
+                    <span class="small gray">THE BIG NERD RANCH</span>
 
+                </div>
             </div>
         </div>
 
         <div class="clearfix"></div>
-
     </div>
 </div>
 
@@ -289,7 +304,6 @@
 
         <img class="illustration" src="images/email.jpg" width="83px"/><br/>
         <span class="contact">
-            Want to work together?<br/>
             <a href="mailto:zapata.joan@gmail.com" target="_blank">
                 Contact me
             </a>

@@ -8,7 +8,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 @import 'mixins';
 
 $breakpoint-580: 880px;
-$breakpoint-320: 580px;
+$breakpoint-320: 640px;
 
 // Adapt the twitter bootstrap badge to defined colors
 .badge {
@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-family: "Circular", " Helvetica Neue", sans-serif;
+  font-family: "Circular", "Helvetica Neue", sans-serif;
   line-height: 1.9;
   font-size: 20px;
   color: $color-text;
@@ -50,8 +50,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trustbk {
+  color: #0C2F3A;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 700;
+  .half-baked {
+    color: #7FBDCF;
+  }
+}
+
 .faded {
-  @include opacity(0.4);
+  @include opacity(0.5);
 }
 
 .small {
@@ -60,11 +69,6 @@ body {
 
 .smaller {
   font-size: 0.85em;
-}
-
-.big {
-  font-family: "Quicksand", serif;
-  font-size: 1.65em;
 }
 
 .gray {
@@ -122,6 +126,31 @@ body {
     width: 100%;
     margin: 0;
 
+    .title {
+      position: relative;
+      z-index: 101;
+      font-size: 1.65em;
+      font-weight: bold;
+      line-height: 1.4;
+      color: $color-text-bright;
+    }
+
+    .subtitle {
+      @extend .smaller;
+      @extend .faded;
+      position: relative;
+      z-index: 101;
+      .trustbk { font-size: 1.1em; }
+    }
+
+    .description {
+      color: $color-text-bright;
+      position: relative;
+      z-index: 101;
+      max-width: 590px;
+      margin: $space-sm auto;
+    }
+
     .header-image {
       display: inline-block;
       width: 880px;
@@ -130,16 +159,23 @@ body {
       background: url(../images/header880.jpg);
       background-size: cover;
 
+      @media (min-width: $breakpoint-580) {
+        z-index: 100;
+        position: relative;
+        margin-top: -120px;
+      }
+
       @media (max-width: $breakpoint-580) {
         width: 580px;
-        height: 555px;
+        height: 368px;
         background: url(../images/header580.jpg);
         background-size: cover;
       }
+
       @media (max-width: $breakpoint-320) {
         width: 100%;
         max-width: 320px;
-        height: 296px;
+        height: 187px;
         background: url(../images/header320.jpg) no-repeat center;
         background-size: 100%;
       }
@@ -422,7 +458,7 @@ body {
     }
 
     .skills {
-      font-size: 0.8em;
+      font-size: 0.7em;
       font-weight: bold;
       word-spacing: $space-xsm/2;
     }
@@ -472,7 +508,6 @@ body {
 
     .card-title {
       padding-top: $space-md;
-      font-family: "Quicksand", serif;
       font-size: 1.2em;
       text-transform: uppercase;
       font-weight: bold;

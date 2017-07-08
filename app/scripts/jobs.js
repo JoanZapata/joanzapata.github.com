@@ -4,10 +4,22 @@ angular
 
         $scope.jobs = [
             {
+                name: "TrustBK",
+                side: false,
+                icon: "images/trustbk.png",
+                date: "2017 - Now",
+                skills: ["Backend", "Web", "Android", "iOS"],
+                screenshots: [],
+                description: "We are currently building a <b>new bank</b> for <b>small and medium businesses</b>, from scratch.<br/><br/>" +
+                "I joined the team very early on and it’s the most exciting project I’ve ever been working on, our goal is " +
+                "very ambitious and all the team is very talented. <br/><br/>We’re all working <b>full-stack</b>, from the product definition to the implementations, " +
+                "backend, web and mobile.<br/><br/>You can find more information <a href='https://trustbk.com/' target='_blank'>here</a>." +
+                " <br/><br/>Also, <a href='https://trustbk.com/jobs/' target='_blank'>we’re hiring</a>!"
+            }, {
                 name: "Hertz 24/7",
                 side: false,
                 icon: "images/h247.png",
-                date: "2016-2017",
+                date: "2016 - 2017",
                 skills: ["iOS"],
                 screenshots: ["h247_0.jpg", "h247_1.jpg", "h247_2.jpg", "h247_3.jpg"],
                 description: "I worked on two distinct subjects on the Hertz 24/7 iOS app."
@@ -33,7 +45,7 @@ angular
                 name: "Livetouch Apps",
                 icon: "images/livetouch.png",
                 company: "JCDecaux, Paris",
-                date: "2015-2016",
+                date: "2015 - 2016",
                 screenshots: ["livetouch_launcher.jpg", "livetouch_twitter.jpg", "livetouch_nearby.jpg", "livetouch_rss.jpg"],
                 description: "Livetouch is a set of 42\" Android-powered screens integrated into urban furnitures like kiosks and bus shelters. In the context of expanding the platform to a lot of new cities, I designed and developed multiple applications to quickly adapt to each cities and provide useful information."
                 + "<ul><li><b>A launcher app</b> customizable with news feed, twitter, weather, and a list of apps</li>"
@@ -50,7 +62,7 @@ angular
                 company: "JCDecaux, Paris",
                 date: "2015",
                 screenshots: ["creabri_1.jpg"],
-                description: "Créabri is a tablet app to help JCDecaux agents collect in-depth details about bus shelters on the field and provide the city with the most accurate answer for a renewal contract. I designed and developed it from scratch. Technically, the biggest challenge of this app was its offline capabilities and reliable synchronization. It's mostly based on RxJava and a reactive storage.",
+                description: "Créabri is a tablet app to help JCDecaux agents collect in-depth details about bus shelters on the field and provide the city with the most accurate answer for a renewal contract. I designed and developed it from scratch. Technically, the biggest challenge of this app was its offline capabilities and reliable synchronization. It’s mostly based on RxJava and a reactive storage.",
                 skills: ["Design", "Android"]
             }, {
                 name: "ConnectCity",
