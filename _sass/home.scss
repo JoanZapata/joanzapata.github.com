@@ -10,7 +10,7 @@ $fa-font-path: "fonts/vendor/fontawesome";
 @import 'variables';
 @import 'mixins';
 
-$breakpoint-580: 880px;
+$breakpoint-580: 992px;
 $breakpoint-320: 640px;
 
 // Adapt the twitter bootstrap badge to defined colors
@@ -149,31 +149,19 @@ body {
 
     .header-image {
       display: inline-block;
-      width: 880px;
-      height: 582px;
+      max-width: 880px;
+      height: auto;
       margin: 0 auto;
-      background: url(../images/header880.jpg);
-      background-size: cover;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
 
       @media (min-width: $breakpoint-580) {
         z-index: 100;
         position: relative;
         margin-top: -120px;
-      }
-
-      @media (max-width: $breakpoint-580) {
-        width: 580px;
-        height: 368px;
-        background: url(../images/header580.jpg);
-        background-size: cover;
-      }
-
-      @media (max-width: $breakpoint-320) {
-        width: 100%;
-        max-width: 320px;
-        height: 187px;
-        background: url(../images/header320.jpg) no-repeat center;
-        background-size: 100%;
       }
     }
   }
