@@ -1,9 +1,9 @@
 ---
 layout: home
 jobs:
-  - name: Margo Bank
+  - name: Memo Bank
     side: false
-    icon: images/margo.png
+    icon: images/memo.png
     date: 2017 - Now
     skills:
       - Backend
@@ -19,9 +19,9 @@ jobs:
       We’re all working **full-stack**, from the product definition to the implementations, backend,
       web and mobile.
 
-      You can find more information [here](https://margo.com/).
+      You can find more information [here](https://memo.bank/).
 
-      Also, [we’re hiring](https://margo.com/jobs/)!
+      Also, [we’re hiring](https://work.memo.bank/careers/)!
 
   - name: Hertz 24/7
     side: false
